@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Conoce VECIA Juristas, su identidad y su filosofía.">
+<title>Quiénes somos | VECIA Juristas</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --verde:#183b32;
+    --verde-claro:#294d42;
+    --crema:#f4f0e6;
+    --papel:#e9e2d3;
+    --burdeos:#713c46;
+    --dorado:#b49a67;
+    --tinta:#252b27;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--crema);color:var(--tinta);font-family:'DM Sans',sans-serif;line-height:1.7}
+a{text-decoration:none;color:inherit}
+.contenedor{width:min(1160px,90%);margin:auto}
+
+header{background:var(--verde);color:var(--crema);border-bottom:1px solid rgba(180,154,103,.45)}
+.cabecera{min-height:100px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.logo{font-family:'Playfair Display',serif;font-size:35px;letter-spacing:5px}
+.logo span{color:var(--dorado)}
+nav{display:flex;flex-wrap:wrap;gap:22px}
+nav a{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#e8e2d7}
+nav a:hover{color:var(--dorado)}
+
+.hero{background:var(--verde);color:var(--crema);padding:75px 0 85px}
+.etiqueta{color:var(--dorado);text-transform:uppercase;letter-spacing:3px;font-size:11px;font-weight:700;margin-bottom:20px}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500}
+.hero h1{font-size:clamp(42px,6vw,68px);line-height:1.12;max-width:800px}
+.hero h1 span{color:var(--dorado);font-style:italic}
+.hero p.descripcion{max-width:650px;color:#dedbd0;margin-top:25px;font-size:16px}
+
+.seccion{padding:85px 0}
+.presentacion{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.foto{min-height:480px;background:url('IMG-20261020-WA0002(1).jpg') center 30%/cover no-repeat;border:8px solid var(--papel);box-shadow:15px 15px 0 rgba(180,154,103,.25)}
+h2{font-size:clamp(34px,4vw,48px);line-height:1.2;color:var(--verde);margin-bottom:25px}
+.texto{color:#55574f}
+.texto p+p{margin-top:18px}
+
+.frase{background:var(--papel);padding:55px 0;text-align:center}
+.frase blockquote{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,32px);color:var(--verde);max-width:850px;margin:auto}
+.frase span{display:block;margin-top:17px;color:var(--burdeos);font-size:11px;letter-spacing:3px;text-transform:uppercase}
+
+.filosofia{background:var(--verde);color:var(--crema)}
+.filosofia h2{color:var(--crema)}
+.filosofia .etiqueta{color:var(--dorado)}
+.filosofia-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.tarjeta{border:1px solid rgba(180,154,103,.4);padding:30px;min-height:210px}
+.tarjeta .numero{font-family:'Playfair Display',serif;font-size:30px;color:var(--dorado);margin-bottom:15px}
+.tarjeta h3{font-size:23px;margin-bottom:12px}
+.tarjeta p{font-size:14px;color:#d4d4c9}
+
+.volver{display:inline-block;margin-top:30px;color:var(--burdeos);font-weight:700;border-bottom:1px solid var(--dorado);padding-bottom:5px}
+
+footer{background:#122c25;color:#d8d4c9;padding:35px 0;text-align:center}
+.footer-logo{font-family:'Playfair Display',serif;font-size:26px;letter-spacing:4px;color:var(--crema);margin-bottom:10px}
+footer p{font-size:12px;color:#bdb9ad}
+footer .lema{color:var(--dorado);margin-bottom:15px}
+
+@media(max-width:800px){
+.cabecera{padding:22px 0;flex-direction:column}
+nav{justify-content:center;gap:13px 17px}
+nav a{font-size:10px}
+.presentacion{grid-template-columns:1fr;gap:35px}
+.foto{min-height:390px}
+.filosofia-grid{grid-template-columns:1fr}
+.seccion{padding:65px 0}
+}
+@media(max-width:420px){
+.logo{font-size:30px}
+.foto{min-height:300px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="contenedor cabecera">
+<a href="index.html" class="logo">VECIA<span>.</span></a>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="quienes-somos.html">Quiénes somos</a>
+<a href="servicios.html">Servicios</a>
+<a href="articulos.html">Artículos</a>
+<a href="index.html#contacto">Contacto</a>
+</nav>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="contenedor">
+<p class="etiqueta">VECIA Juristas · Nuestra identidad</p>
+<h1>El Derecho comienza con una <span>mirada.</span></h1>
+<p class="descripcion">
+Un proyecto personal que entiende el conocimiento jurídico
+como una herramienta para comprender, analizar y afrontar
+la realidad.
+</p>
+</div>
+</section>
+
+<section class="seccion">
+<div class="contenedor presentacion">
+
+<div class="foto" role="img" aria-label="Retrato profesional"></div>
+
+<div>
+<p class="etiqueta" style="color:var(--burdeos)">01 / Nuestra presentación</p>
+<h2>¿Quién está detrás de VECIA?</h2>
+
+<div class="texto">
+<p>
+VECIA Juristas es una iniciativa personal que nace de la
+vocación por el Derecho, el estudio y el análisis de las
+cuestiones jurídicas.
+</p>
+
+<p>
+Su propósito es construir un espacio en el que el
+asesoramiento, la consultoría y la reflexión jurídica
+ocupen un lugar central.
+</p>
+
+<p>
+Un proyecto con identidad propia, concebido desde la
+seriedad, el rigor y la atención a las circunstancias
+particulares de cada cuestión.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="frase">
+<div class="contenedor">
+<blockquote>
+«Asesoramiento, consultoría y mucho + Derecho».
+</blockquote>
+<span>La identidad de VECIA Juristas</span>
+</div>
+</section>
+
+<section class="seccion filosofia">
+<div class="contenedor">
+
+<p class="etiqueta">02 / Nuestra filosofía</p>
+<h2>Una forma de trabajar y entender el Derecho.</h2>
+
+<div class="filosofia-grid">
+
+<article class="tarjeta">
+<div class="numero">01</div>
+<h3>Rigor</h3>
+<p>
+El estudio y el análisis cuidadoso como punto de partida
+para comprender las cuestiones jurídicas.
+</p>
+</article>
+
+<article class="tarjeta">
+<div class="numero">02</div>
+<h3>Claridad</h3>
+<p>
+Explicar las cuestiones jurídicas de forma comprensible,
+sin renunciar a la precisión.
+</p>
+</article>
+
+<article class="tarjeta">
+<div class="numero">03</div>
+<h3>Reflexión</h3>
+<p>
+Entender el Derecho también como una realidad viva,
+vinculada a la sociedad y a las personas.
+</p>
+</article>
+
+</div>
+
+</div>
+</section>
+
+<section class="seccion">
+<div class="contenedor">
+<p class="etiqueta" style="color:var(--burdeos)">VECIA Juristas</p>
+<h2>Asesoramiento, consultoría y mucho + Derecho.</h2>
+<p class="texto">
+Un espacio para el conocimiento jurídico, el análisis
+y la reflexión.
+</p>
+<a href="index.html" class="volver">← Volver a la página principal</a>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="contenedor">
+<div class="footer-logo">VECIA JURISTAS</div>
+<p class="lema">Asesoramiento, consultoría y mucho + Derecho</p>
+<p>© 2026 VECIA Juristas. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+</body>
+</html>
