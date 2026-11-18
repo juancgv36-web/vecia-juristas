@@ -4,23 +4,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>VECIA Juristas | Asesoramiento, consultoría y mucho + Derecho</title>
-
 <meta name="description" content="VECIA Juristas. Asesoramiento, consultoría y mucho más Derecho.">
+<title>VECIA Juristas | Inicio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --verde: #102b24;
-    --verde-claro: #1b4035;
-    --marfil: #f3ecdf;
-    --burdeos: #571b24;
-    --dorado: #c6a15b;
-    --texto: #241b18;
+    --verde: #183b32;
+    --verde-claro: #294d42;
+    --crema: #f4f0e6;
+    --papel: #e9e2d3;
+    --burdeos: #713c46;
+    --dorado: #b49a67;
+    --tinta: #252b27;
 }
 
 * {
@@ -34,449 +32,393 @@ html {
 }
 
 body {
-    background: var(--marfil);
-    color: var(--texto);
+    background: var(--crema);
+    color: var(--tinta);
     font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
 }
 
 a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
+}
+
+.contenedor {
+    width: min(1160px, 90%);
+    margin: auto;
 }
 
 /* CABECERA */
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    padding: 25px 6%;
+    background: var(--verde);
+    color: var(--crema);
+    border-bottom: 1px solid rgba(180,154,103,.45);
+}
+
+.cabecera {
+    min-height: 100px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 25px;
-    color: var(--marfil);
 }
 
 .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 37px;
-    line-height: .8;
-    font-weight: 700;
-    letter-spacing: 1px;
-    white-space: nowrap;
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    letter-spacing: 5px;
 }
 
 .logo span {
-    display: block;
     color: var(--dorado);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    letter-spacing: 8px;
-    margin-top: 10px;
-    padding-left: 5px;
 }
 
 nav {
     display: flex;
-    align-items: center;
-    gap: 30px;
-    font-size: 13px;
+    flex-wrap: wrap;
+    gap: 22px;
 }
 
 nav a {
-    transition: color .3s;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #e8e2d7;
 }
 
 nav a:hover {
     color: var(--dorado);
 }
 
-.lema-header {
-    color: var(--marfil);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
-    font-style: italic;
-    border-bottom: 1px solid var(--dorado);
-    padding-bottom: 5px;
-    white-space: nowrap;
-}
-
 /* PORTADA */
 
-.hero {
-    min-height: 690px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
+.portada {
+    background: var(--verde);
+    color: var(--crema);
+    padding: 85px 0 95px;
+}
+
+.portada-contenido {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
     align-items: center;
-    background:
-        linear-gradient(90deg, rgba(10,29,24,.98) 0%,
-        rgba(10,29,24,.92) 42%,
-        rgba(10,29,24,.25) 75%,
-        rgba(10,29,24,.05) 100%),
-        url('tu-fotografia.jpg') right center / auto 100% no-repeat,
-        var(--verde);
-    padding: 140px 8% 70px;
+    gap: 65px;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 95px;
-    height: 100%;
-    background: linear-gradient(135deg, var(--burdeos), transparent 75%);
-    opacity: .8;
-    clip-path: polygon(0 0, 100% 0, 0 58%);
+.etiqueta {
+    color: var(--dorado);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 24px;
 }
 
-.hero-contenido {
-    position: relative;
-    z-index: 2;
-    max-width: 650px;
-    color: var(--marfil);
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
 }
 
-.hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(90px, 13vw, 170px);
-    line-height: .75;
+.portada h1 {
+    font-size: clamp(43px, 6vw, 70px);
+    line-height: 1.12;
     font-weight: 500;
-    letter-spacing: -5px;
+    margin-bottom: 25px;
 }
 
-.hero-subtitulo {
+.portada h1 span {
     color: var(--dorado);
-    font-size: clamp(20px, 3vw, 31px);
-    letter-spacing: 13px;
-    margin: 25px 0 20px 8px;
-}
-
-.linea-dorada {
-    width: 390px;
-    max-width: 90%;
-    height: 2px;
-    background: var(--dorado);
-    margin-bottom: 23px;
-}
-
-.hero-frase {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(30px, 4vw, 45px);
     font-style: italic;
-    line-height: 1.05;
-    max-width: 560px;
 }
 
-.hero-frase strong {
-    color: var(--dorado);
-    font-weight: 600;
+.portada-texto {
+    max-width: 520px;
+    color: #dedbd0;
+    font-size: 16px;
+    margin-bottom: 35px;
 }
 
 .boton {
     display: inline-block;
-    border: 1px solid var(--dorado);
-    color: var(--marfil);
-    padding: 14px 27px;
-    margin-top: 30px;
-    font-size: 14px;
-    transition: .3s;
+    padding: 14px 24px;
+    background: var(--dorado);
+    color: #172e27;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
 }
 
 .boton:hover {
-    background: var(--dorado);
-    color: var(--verde);
+    background: var(--crema);
 }
 
-.hero-lateral {
-    position: absolute;
-    right: 5%;
-    top: 48%;
-    transform: translateY(-50%);
-    color: var(--texto);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 25px;
-    font-style: italic;
-    line-height: 1.2;
-    z-index: 2;
+.foto-portada {
+    min-height: 420px;
+    background:
+        linear-gradient(180deg, transparent 65%, rgba(17,35,29,.25)),
+        url('IMG-20261020-WA0002(1).jpg') center 30% / cover no-repeat;
+    border: 8px solid rgba(244,240,230,.12);
+    box-shadow: 18px 18px 0 rgba(180,154,103,.2);
+}
+
+/* FRASE */
+
+.frase {
+    background: var(--papel);
+    padding: 48px 0;
+    text-align: center;
+}
+
+.frase p {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(21px, 3vw, 30px);
+    color: var(--verde);
+    max-width: 850px;
+    margin: auto;
+}
+
+.frase span {
+    display: block;
+    margin-top: 14px;
+    color: var(--burdeos);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 /* PRESENTACIÓN */
 
-.introduccion {
-    padding: 85px 9%;
-    text-align: center;
-    background: var(--marfil);
+.seccion {
+    padding: 85px 0;
 }
 
-.etiqueta {
-    color: var(--burdeos);
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 11px;
-    font-weight: 700;
-}
-
-.introduccion h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(38px, 5vw, 57px);
-    font-weight: 500;
-    margin: 17px auto;
-    max-width: 800px;
-    line-height: 1;
-}
-
-.introduccion p {
-    max-width: 690px;
-    margin: 0 auto;
-    line-height: 1.8;
-    font-size: 15px;
-}
-
-/* SECCIONES */
-
-.secciones {
+.presentacion {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 1.05fr;
-    background: var(--marfil);
-}
-
-.tarjeta {
-    min-height: 390px;
-    border-top: 1px solid rgba(120,90,50,.35);
-    border-right: 1px solid rgba(120,90,50,.35);
-}
-
-.tarjeta-imagen {
-    height: 170px;
-    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background:
-        linear-gradient(135deg, rgba(16,43,36,.2), rgba(87,27,36,.25)),
-        var(--verde-claro);
-    color: var(--dorado);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 64px;
 }
 
-.tarjeta:nth-child(2) .tarjeta-imagen {
-    background: linear-gradient(135deg, #302b24, #796448);
+.seccion h2 {
+    color: var(--verde);
+    font-size: clamp(35px, 4vw, 48px);
+    line-height: 1.2;
+    font-weight: 500;
 }
 
-.tarjeta:nth-child(3) .tarjeta-imagen {
-    background: linear-gradient(135deg, #642c32, #291c1d);
+.presentacion-texto {
+    color: #55574f;
 }
 
-.tarjeta-contenido {
-    padding: 27px 30px 35px;
-}
-
-.tarjeta h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 31px;
-    line-height: 1;
-    font-weight: 600;
-    margin-bottom: 17px;
-}
-
-.tarjeta p {
-    font-size: 14px;
-    line-height: 1.65;
-    margin-bottom: 22px;
+.presentacion-texto p + p {
+    margin-top: 18px;
 }
 
 .enlace {
-    font-size: 13px;
+    display: inline-block;
+    margin-top: 25px;
+    color: var(--burdeos);
     font-weight: 700;
     border-bottom: 1px solid var(--dorado);
-    padding-bottom: 5px;
+    padding-bottom: 4px;
 }
 
-.enlace:hover {
-    color: var(--burdeos);
+/* ACCESOS */
+
+.accesos {
+    background: var(--verde);
+    color: var(--crema);
+}
+
+.accesos h2 {
+    color: var(--crema);
+}
+
+.accesos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 42px;
+}
+
+.acceso {
+    display: block;
+    padding: 32px 27px;
+    border: 1px solid rgba(180,154,103,.4);
+    min-height: 230px;
+    transition: .2s;
+}
+
+.acceso:hover {
+    background: var(--verde-claro);
+    transform: translateY(-4px);
+}
+
+.acceso .numero {
+    color: var(--dorado);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.acceso h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.acceso p {
+    color: #d4d4c9;
+    font-size: 14px;
+}
+
+.acceso .mas {
+    display: block;
+    margin-top: 20px;
+    color: var(--dorado);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* CONTACTO */
 
 .contacto {
+    background: var(--papel);
+}
+
+.contacto-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contacto-texto {
+    color: #64645d;
+    margin-top: 20px;
+}
+
+.datos-contacto {
+    background: var(--verde);
+    color: var(--crema);
+    padding: 35px;
+}
+
+.dato {
+    padding: 17px 0;
+    border-bottom: 1px solid rgba(244,240,230,.2);
+}
+
+.dato small {
+    display: block;
+    color: var(--dorado);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.dato a {
+    font-size: 17px;
+    overflow-wrap: anywhere;
+}
+
+.dato a:hover {
+    color: var(--dorado);
+}
+
+.boton-whatsapp {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 20px;
     background: var(--burdeos);
-    color: var(--marfil);
-    padding: 35px 30px;
-    position: relative;
-    overflow: hidden;
-}
-
-.contacto::after {
-    content: "V";
-    position: absolute;
-    right: -5px;
-    bottom: -75px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 270px;
-    color: rgba(255,255,255,.06);
-    pointer-events: none;
-}
-
-.contacto h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 39px;
-    font-weight: 500;
-    margin-bottom: 12px;
-}
-
-.contacto .linea-dorada {
-    width: 65px;
-    margin-bottom: 22px;
-}
-
-.contacto p {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.contacto .boton {
-    position: relative;
-    z-index: 2;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 /* PIE */
 
 footer {
-    background: var(--verde);
-    color: var(--marfil);
-    padding: 30px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    font-size: 11px;
-    letter-spacing: 3px;
+    background: #122c25;
+    color: #d8d4c9;
+    padding: 35px 0;
+    text-align: center;
 }
 
-footer span {
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    letter-spacing: 4px;
+    color: var(--crema);
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #bdb9ad;
+}
+
+footer .lema {
     color: var(--dorado);
+    margin-bottom: 15px;
 }
 
-/* ADAPTACIÓN A MÓVILES */
+/* MÓVILES */
 
-@media (max-width: 900px) {
-    header {
-        padding: 20px 5%;
-        flex-wrap: wrap;
+@media (max-width: 800px) {
+    .cabecera {
+        padding: 22px 0;
+        flex-direction: column;
     }
 
     nav {
-        order: 3;
-        width: 100%;
-        justify-content: space-between;
-        gap: 12px;
-        font-size: 11px;
+        justify-content: center;
+        gap: 13px 17px;
     }
 
-    .lema-header {
-        font-size: 15px;
+    nav a {
+        font-size: 10px;
     }
 
-    .hero {
-        min-height: 650px;
-        background-position: center, 65% center, center;
-        background-size: cover, auto 75%, cover;
-        align-items: flex-end;
-        padding: 180px 7% 65px;
+    .portada {
+        padding: 55px 0 65px;
     }
 
-    .hero-contenido {
-        background: linear-gradient(90deg, rgba(10,29,24,.9), rgba(10,29,24,.2));
-        padding: 20px;
+    .portada-contenido,
+    .presentacion,
+    .contacto-contenido {
+        grid-template-columns: 1fr;
+        gap: 35px;
     }
 
-    .hero-lateral {
-        display: none;
+    .foto-portada {
+        min-height: 350px;
     }
 
-    .secciones {
-        grid-template-columns: repeat(2, 1fr);
+    .accesos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion {
+        padding: 65px 0;
     }
 }
 
-@media (max-width: 560px) {
-    header {
-        padding: 17px 6%;
-    }
-
+@media (max-width: 420px) {
     .logo {
         font-size: 30px;
     }
 
-    .lema-header {
-        font-size: 13px;
+    .foto-portada {
+        min-height: 290px;
     }
 
-    nav {
-        overflow-x: auto;
-        white-space: nowrap;
-        justify-content: flex-start;
-        gap: 22px;
-        padding: 12px 0;
-    }
-
-    .hero {
-        min-height: 680px;
-        background-position: center, 62% top, center;
-        background-size: cover, auto 67%, cover;
-        padding: 370px 5% 45px;
-    }
-
-    .hero-contenido {
-        padding: 17px;
-        background: rgba(10,29,24,.88);
-    }
-
-    .hero h1 {
-        font-size: 85px;
-    }
-
-    .hero-subtitulo {
-        font-size: 18px;
-        letter-spacing: 9px;
-    }
-
-    .hero-frase {
-        font-size: 31px;
-    }
-
-    .introduccion {
-        padding: 65px 8%;
-    }
-
-    .secciones {
-        grid-template-columns: 1fr;
-    }
-
-    .tarjeta {
-        min-height: auto;
-    }
-
-    .tarjeta-imagen {
-        height: 145px;
-    }
-
-    .contacto {
-        padding: 40px 30px;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-        line-height: 1.8;
-        letter-spacing: 2px;
+    .datos-contacto {
+        padding: 25px;
     }
 }
 </style>
@@ -485,114 +427,184 @@ footer span {
 <body>
 
 <header>
-    <a href="#" class="logo">
-        VECIA
-        <span>JURISTAS</span>
-    </a>
+    <div class="contenedor cabecera">
+        <a href="index.html" class="logo">VECIA<span>.</span></a>
 
-    <nav>
-        <a href="#quienes-somos">Quiénes somos</a>
-        <a href="#servicios">Servicios jurídicos</a>
-        <a href="#articulos">Artículos y comentarios</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-
-    <div class="lema-header">Derecho con criterio</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="quienes-somos.html">Quiénes somos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="articulos.html">Artículos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
 </header>
 
 <main>
 
-<section class="hero">
-    <div class="hero-contenido">
-        <h1>VECIA</h1>
-        <div class="hero-subtitulo">JURISTAS</div>
-        <div class="linea-dorada"></div>
+<section class="portada">
+    <div class="contenedor portada-contenido">
 
-        <p class="hero-frase">
-            Asesoramiento, consultoría<br>
-            y mucho <strong>+ Derecho</strong>
-        </p>
+        <div>
+            <p class="etiqueta">Derecho · Asesoramiento · Consultoría</p>
 
-        <a href="#quienes-somos" class="boton">
-            Descubre más &nbsp; →
-        </a>
-    </div>
+            <h1>
+                El Derecho,<br>
+                con otra <span>mirada.</span>
+            </h1>
 
-    <div class="hero-lateral">
-        Conocimiento.<br>
-        Experiencia.<br>
-        Compromiso.
+            <p class="portada-texto">
+                Asesoramiento, consultoría y mucho + Derecho.
+                Un espacio dedicado al análisis jurídico,
+                la reflexión y el conocimiento del mundo del Derecho.
+            </p>
+
+            <a href="quienes-somos.html" class="boton">
+                Conoce VECIA
+            </a>
+        </div>
+
+        <div class="foto-portada"
+             role="img"
+             aria-label="Retrato profesional">
+        </div>
+
     </div>
 </section>
 
-<section class="introduccion" id="quienes-somos">
-    <div class="etiqueta">VECIA Juristas</div>
-
-    <h2>El Derecho también necesita una mirada propia.</h2>
-
-    <p>
-        Una marca personal dedicada al asesoramiento, la consultoría
-        y el análisis jurídico. Un espacio desde el que abordar el
-        Derecho con rigor, criterio y cercanía.
-    </p>
-</section>
-
-<section class="secciones">
-
-    <article class="tarjeta">
-        <div class="tarjeta-imagen">V</div>
-        <div class="tarjeta-contenido">
-            <h3>Quiénes somos</h3>
-            <p>
-                Una marca personal, un compromiso con el Derecho
-                y con quienes confían en él.
-            </p>
-            <a href="#quienes-somos" class="enlace">Conoce VECIA →</a>
-        </div>
-    </article>
-
-    <article class="tarjeta" id="servicios">
-        <div class="tarjeta-imagen">§</div>
-        <div class="tarjeta-contenido">
-            <h3>Servicios jurídicos y consultoría</h3>
-            <p>
-                Asesoramiento y soluciones jurídicas con rigor,
-                atención y cercanía.
-            </p>
-            <a href="#contacto" class="enlace">Nuestros servicios →</a>
-        </div>
-    </article>
-
-    <article class="tarjeta" id="articulos">
-        <div class="tarjeta-imagen">01</div>
-        <div class="tarjeta-contenido">
-            <h3>Artículos y comentarios de legislación</h3>
-            <p>
-                Análisis, reflexión y actualidad jurídica para
-                comprender el presente.
-            </p>
-            <a href="#articulos" class="enlace">Leer artículos →</a>
-        </div>
-    </article>
-
-    <aside class="contacto" id="contacto">
-        <h3>Contacto</h3>
-        <div class="linea-dorada"></div>
+<section class="frase">
+    <div class="contenedor">
         <p>
-            Hablemos.<br>
-            Estamos aquí para atenderte.
+            El Derecho no es solamente un conjunto de normas:
+            también es una forma de comprender la realidad.
         </p>
-        <a href="mailto:" class="boton">Escríbenos →</a>
-    </aside>
+        <span>VECIA Juristas</span>
+    </div>
+</section>
 
+<section class="seccion">
+    <div class="contenedor presentacion">
+
+        <div>
+            <p class="etiqueta" style="color:var(--burdeos)">
+                Una forma de entender el Derecho
+            </p>
+            <h2>Conocimiento, criterio y compromiso.</h2>
+        </div>
+
+        <div class="presentacion-texto">
+            <p>
+                VECIA Juristas nace como un espacio personal
+                dedicado al Derecho, el asesoramiento y la consultoría.
+            </p>
+
+            <p>
+                Una iniciativa que busca acercar el conocimiento
+                jurídico y fomentar una comprensión rigurosa
+                y reflexiva de las cuestiones legales.
+            </p>
+
+            <a href="quienes-somos.html" class="enlace">
+                Descubre quiénes somos →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="seccion accesos">
+    <div class="contenedor">
+
+        <p class="etiqueta">Explora VECIA Juristas</p>
+        <h2>El Derecho, desde<br>distintas perspectivas.</h2>
+
+        <div class="accesos-grid">
+
+            <a href="quienes-somos.html" class="acceso">
+                <div class="numero">01</div>
+                <h3>¿Quiénes somos?</h3>
+                <p>
+                    Conoce el origen, la filosofía y la identidad
+                    de VECIA Juristas.
+                </p>
+                <span class="mas">Conócenos →</span>
+            </a>
+
+            <a href="servicios.html" class="acceso">
+                <div class="numero">02</div>
+                <h3>Servicios jurídicos y consultoría</h3>
+                <p>
+                    Descubre nuestras áreas de trabajo y
+                    posibilidades de asesoramiento.
+                </p>
+                <span class="mas">Ver servicios →</span>
+            </a>
+
+            <a href="articulos.html" class="acceso">
+                <div class="numero">03</div>
+                <h3>Artículos y legislación</h3>
+                <p>
+                    Análisis, comentarios y reflexiones
+                    sobre el mundo jurídico.
+                </p>
+                <span class="mas">Leer artículos →</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<section class="seccion contacto" id="contacto">
+    <div class="contenedor contacto-contenido">
+
+        <div>
+            <p class="etiqueta" style="color:var(--burdeos)">
+                Estamos en contacto
+            </p>
+
+            <h2>Hablemos.</h2>
+
+            <p class="contacto-texto">
+                Para consultas e información, puedes ponerte
+                en contacto a través del teléfono o del correo
+                electrónico.
+            </p>
+        </div>
+
+        <div class="datos-contacto">
+
+            <div class="dato">
+                <small>Teléfono</small>
+                <a href="tel:+34634260689">634 260 689</a>
+            </div>
+
+            <div class="dato">
+                <small>Correo electrónico</small>
+                <a href="mailto:juancgv36@gmail.com">
+                    juancgv36@gmail.com
+                </a>
+            </div>
+
+            <a class="boton-whatsapp"
+               href="https://wa.me/34634260689"
+               target="_blank"
+               rel="noopener">
+                Contactar por WhatsApp
+            </a>
+
+        </div>
+
+    </div>
 </section>
 
 </main>
 
 <footer>
-    <div>VECIA JURISTAS</div>
-    <div><span>—</span> DERECHO Y CONSULTORÍA <span>—</span></div>
-    <div>UNA MIRADA PROPIA</div>
+    <div class="contenedor">
+        <div class="footer-logo">VECIA JURISTAS</div>
+        <p class="lema">Asesoramiento, consultoría y mucho + Derecho</p>
+        <p>© 2026 VECIA Juristas. Todos los derechos reservados.</p>
+    </div>
 </footer>
 
 </body>
