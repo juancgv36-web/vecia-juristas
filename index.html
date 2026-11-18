@@ -154,10 +154,11 @@ h1, h2, h3 {
 }
 
 .foto-portada {
-    min-height: 420px;
-    background:
-        linear-gradient(180deg, transparent 65%, rgba(17,35,29,.25)),
-        url('IMG-20261020-WA0002(1).jpg') center 40% / cover no-repeat;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
     border: 8px solid rgba(244,240,230,.12);
     box-shadow: 18px 18px 0 rgba(180,154,103,.2);
 }
@@ -395,10 +396,6 @@ footer .lema {
         gap: 35px;
     }
 
-    .foto-portada {
-        min-height: 350px;
-    }
-
     .accesos-grid {
         grid-template-columns: 1fr;
     }
@@ -413,9 +410,6 @@ footer .lema {
         font-size: 30px;
     }
 
-    .foto-portada {
-        min-height: 290px;
-    }
 
     .datos-contacto {
         padding: 25px;
@@ -464,10 +458,10 @@ footer .lema {
             </a>
         </div>
 
-        <div class="foto-portada"
-             role="img"
-             aria-label="Retrato profesional">
-        </div>
+       <img
+    class="foto-portada"
+    src="IMG-20261020-WA0002(1).jpg"
+    alt="Retrato profesional">
 
     </div>
 </section>
