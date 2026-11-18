@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Artículos, comentarios de legislación y análisis jurídico de VECIA Juristas.">
+<title>Artículos y legislación | VECIA Juristas</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --verde:#183b32;
+    --verde-claro:#294d42;
+    --crema:#f4f0e6;
+    --papel:#e9e2d3;
+    --burdeos:#713c46;
+    --dorado:#b49a67;
+    --tinta:#252b27;
+}
+
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    background:var(--crema);
+    color:var(--tinta);
+    font-family:'DM Sans',sans-serif;
+    line-height:1.7;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+.contenedor {
+    width:min(1160px,90%);
+    margin:auto;
+}
+
+/* CABECERA */
+
+header {
+    background:var(--verde);
+    color:var(--crema);
+    border-bottom:1px solid rgba(180,154,103,.45);
+}
+
+.cabecera {
+    min-height:100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.logo {
+    font-family:'Playfair Display',serif;
+    font-size:35px;
+    letter-spacing:5px;
+}
+
+.logo span {
+    color:var(--dorado);
+}
+
+nav {
+    display:flex;
+    flex-wrap:wrap;
+    gap:22px;
+}
+
+nav a {
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#e8e2d7;
+}
+
+nav a:hover,
+nav a.activo {
+    color:var(--dorado);
+}
+
+/* PORTADA */
+
+.hero {
+    background:var(--verde);
+    color:var(--crema);
+    padding:80px 0 90px;
+}
+
+.etiqueta {
+    color:var(--dorado);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:11px;
+    font-weight:700;
+    margin-bottom:22px;
+}
+
+h1,h2,h3 {
+    font-family:'Playfair Display',serif;
+    font-weight:500;
+}
+
+.hero h1 {
+    font-size:clamp(42px,6vw,68px);
+    line-height:1.13;
+    max-width:850px;
+}
+
+.hero h1 span {
+    color:var(--dorado);
+    font-style:italic;
+}
+
+.hero .descripcion {
+    max-width:680px;
+    color:#dedbd0;
+    margin-top:25px;
+    font-size:16px;
+}
+
+/* PRESENTACIÓN */
+
+.seccion {
+    padding:80px 0;
+}
+
+.intro {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:65px;
+    align-items:start;
+}
+
+h2 {
+    font-size:clamp(34px,4vw,47px);
+    line-height:1.2;
+    color:var(--verde);
+    margin-bottom:24px;
+}
+
+.texto {
+    color:#55574f;
+}
+
+/* CATEGORÍAS */
+
+.categorias {
+    background:var(--papel);
+    padding:35px 0;
+}
+
+.categorias-lista {
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.categoria {
+    display:inline-block;
+    border:1px solid rgba(113,60,70,.45);
+    padding:9px 16px;
+    color:var(--burdeos);
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+/* PUBLICACIONES */
+
+.publicaciones {
+    padding:85px 0;
+}
+
+.publicaciones-cabecera {
+    margin-bottom:40px;
+}
+
+.publicaciones-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.articulo {
+    background:#ebe6da;
+    padding:32px;
+    border-top:3px solid var(--burdeos);
+    display:flex;
+    flex-direction:column;
+    min-height:260px;
+}
+
+.articulo .categoria-texto {
+    color:var(--burdeos);
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.articulo h3 {
+    color:var(--verde);
+    font-size:25px;
+    line-height:1.3;
+    margin-bottom:15px;
+}
+
+.articulo p {
+    color:#64645d;
+    font-size:14px;
+}
+
+.articulo .meta {
+    margin-top:auto;
+    padding-top:25px;
+    color:#858176;
+    font-size:11px;
+}
+
+.articulo .proximamente {
+    display:inline-block;
+    margin-top:18px;
+    color:var(--burdeos);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+/* INVITACIÓN */
+
+.invitacion {
+    background:var(--verde);
+    color:var(--crema);
+    padding:65px 0;
+    text-align:center;
+}
+
+.invitacion h2 {
+    color:var(--crema);
+}
+
+.invitacion p {
+    max-width:650px;
+    margin:auto;
+    color:#dedbd0;
+}
+
+.boton {
+    display:inline-block;
+    margin-top:28px;
+    padding:14px 25px;
+    background:var(--dorado);
+    color:var(--verde);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:11px;
+    font-weight:700;
+}
+
+.boton:hover {
+    background:var(--crema);
+}
+
+/* VOLVER Y PIE */
+
+.volver {
+    display:inline-block;
+    margin-top:30px;
+    color:var(--burdeos);
+    font-weight:700;
+    border-bottom:1px solid var(--dorado);
+    padding-bottom:4px;
+}
+
+footer {
+    background:#122c25;
+    color:#d8d4c9;
+    padding:35px 0;
+    text-align:center;
+}
+
+.footer-logo {
+    font-family:'Playfair Display',serif;
+    font-size:26px;
+    letter-spacing:4px;
+    color:var(--crema);
+    margin-bottom:10px;
+}
+
+footer p {
+    font-size:12px;
+    color:#bdb9ad;
+}
+
+footer .lema {
+    color:var(--dorado);
+    margin-bottom:15px;
+}
+
+/* MÓVILES */
+
+@media(max-width:800px) {
+    .cabecera {
+        padding:22px 0;
+        flex-direction:column;
+    }
+
+    nav {
+        justify-content:center;
+        gap:13px 17px;
+    }
+
+    nav a {
+        font-size:10px;
+    }
+
+    .intro {
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .publicaciones-grid {
+        grid-template-columns:1fr;
+    }
+
+    .seccion {
+        padding:65px 0;
+    }
+}
+
+@media(max-width:420px) {
+    .logo {
+        font-size:30px;
+    }
+
+    .articulo {
+        padding:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="contenedor cabecera">
+
+<a href="index.html" class="logo">VECIA<span>.</span></a>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="quienes-somos.html">Quiénes somos</a>
+<a href="servicios.html">Servicios</a>
+<a href="articulos.html" class="activo">Artículos</a>
+<a href="index.html#contacto">Contacto</a>
+</nav>
+
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="contenedor">
+
+<p class="etiqueta">VECIA Juristas · Publicaciones</p>
+
+<h1>
+El Derecho también se
+<span>escribe y se piensa.</span>
+</h1>
+
+<p class="descripcion">
+Artículos, comentarios de legislación y reflexiones
+jurídicas. Un espacio para analizar las normas,
+comprender sus implicaciones y pensar el Derecho.
+</p>
+
+</div>
+</section>
+
+<section class="seccion">
+<div class="contenedor intro">
+
+<div>
+<p class="etiqueta" style="color:var(--burdeos)">
+01 / El espacio editorial
+</p>
+
+<h2>Ideas, legislación y pensamiento jurídico.</h2>
+</div>
+
+<div class="texto">
+<p>
+Este espacio reúne publicaciones dedicadas al estudio
+y análisis del Derecho, la actualidad legislativa
+y las cuestiones jurídicas de interés.
+</p>
+
+<p style="margin-top:18px">
+Un lugar para la reflexión, el comentario y la divulgación,
+desde una perspectiva rigurosa y accesible.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="categorias">
+<div class="contenedor">
+
+<p class="etiqueta" style="color:var(--burdeos)">
+02 / Materias de interés
+</p>
+
+<div class="categorias-lista">
+<span class="categoria">Derecho civil</span>
+<span class="categoria">Derecho penal</span>
+<span class="categoria">Derecho administrativo</span>
+<span class="categoria">Legislación</span>
+<span class="categoria">Análisis jurídico</span>
+<span class="categoria">Actualidad</span>
+</div>
+
+</div>
+</section>
+
+<section class="publicaciones">
+<div class="contenedor">
+
+<div class="publicaciones-cabecera">
+<p class="etiqueta" style="color:var(--burdeos)">
+03 / Biblioteca jurídica
+</p>
+
+<h2>Artículos y comentarios.</h2>
+
+<p class="texto">
+Un espacio que iremos ampliando con nuevas publicaciones.
+</p>
+</div>
+
+<div class="publicaciones-grid">
+
+<article class="articulo">
+<span class="categoria-texto">Análisis jurídico</span>
+<h3>El Derecho ante los desafíos de la sociedad actual</h3>
+<p>
+Reflexiones sobre el papel del ordenamiento jurídico
+en una realidad social en constante transformación.
+</p>
+<div class="meta">VECIA Juristas · Publicación pendiente</div>
+<span class="proximamente">Próximamente</span>
+</article>
+
+<article class="articulo">
+<span class="categoria-texto">Legislación</span>
+<h3>La importancia de interpretar las normas</h3>
+<p>
+Una aproximación al valor de la interpretación jurídica
+y a la aplicación de las disposiciones normativas.
+</p>
+<div class="meta">VECIA Juristas · Publicación pendiente</div>
+<span class="proximamente">Próximamente</span>
+</article>
+
+<article class="articulo">
+<span class="categoria-texto">Actualidad jurídica</span>
+<h3>El Derecho y su dimensión social</h3>
+<p>
+Una mirada a la relación entre las normas jurídicas,
+las instituciones y la convivencia.
+</p>
+<div class="meta">VECIA Juristas · Publicación pendiente</div>
+<span class="proximamente">Próximamente</span>
+</article>
+
+<article class="articulo">
+<span class="categoria-texto">Comentarios legislativos</span>
+<h3>La legislación como instrumento de cambio</h3>
+<p>
+El análisis de las reformas normativas y su repercusión
+en la vida de las personas y las instituciones.
+</p>
+<div class="meta">VECIA Juristas · Publicación pendiente</div>
+<span class="proximamente">Próximamente</span>
+</article>
+
+</div>
+
+</div>
+</section>
+
+<section class="invitacion">
+<div class="contenedor">
+
+<p class="etiqueta">VECIA Juristas</p>
+
+<h2>El conocimiento jurídico está en movimiento.</h2>
+
+<p>
+Este espacio crecerá con nuevas publicaciones,
+comentarios y análisis sobre el mundo del Derecho.
+</p>
+
+<a href="index.html#contacto" class="boton">
+Contactar
+</a>
+
+</div>
+</section>
+
+<section class="seccion">
+<div class="contenedor">
+
+<a href="index.html" class="volver">
+← Volver a la página principal
+</a>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="contenedor">
+
+<div class="footer-logo">VECIA JURISTAS</div>
+
+<p class="lema">
+Asesoramiento, consultoría y mucho + Derecho
+</p>
+
+<p>© 2026 VECIA Juristas. Todos los derechos reservados.</p>
+
+</div>
+</footer>
+
+</body>
+</html>
