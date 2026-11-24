@@ -541,6 +541,31 @@ footer .lema {
     }
 }
 
+.redes-iconos {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.redes-iconos a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+
+.redes-iconos img {
+    width: 21px;
+    height: 21px;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.redes-iconos a:hover img {
+    transform: translateY(-3px);
+    opacity: .7;
+}
+
 </style>
 <link rel="stylesheet" href="cookies.css">
 <script src="cookies.js" defer></script>
@@ -830,17 +855,25 @@ footer .lema {
                 </button>
             </div>
 
-            <div class="footer-columna">
-                <h3>Redes</h3>
-                <a href="https://www.instagram.com/vecia_juancgv/"
-                   target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://x.com/Vecia_juristas"
-                   target="_blank" rel="noopener noreferrer">X (Twitter)</a>
-                <a href="https://www.tiktok.com/@vecia.juristas"
-                   target="_blank" rel="noopener noreferrer">TikTok</a>
-                <a href="https://www.linkedin.com/in/juan-carlos-garcía-vega-58001a359/"
-                   target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
+          
+<div class="footer-columna">
+    <h3>Redes</h3>
+    <div class="redes-iconos">
+        <a href="https://www.instagram.com/vecia_juancgv/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="https://cdn.simpleicons.org/instagram/e9e2d3" alt="Instagram">
+        </a>
+        <a href="https://x.com/Vecia_juristas" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <img src="https://cdn.simpleicons.org/x/e9e2d3" alt="X">
+        </a>
+        <a href="https://www.tiktok.com/@vecia.juristas" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <img src="https://cdn.simpleicons.org/tiktok/e9e2d3" alt="TikTok">
+        </a>
+        <a href="https://www.linkedin.com/in/juan-carlos-garcía-vega-58001a359/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="https://cdn.simpleicons.org/linkedin/e9e2d3" alt="LinkedIn">
+        </a>
+    </div>
+</div>
+
 
             <div class="footer-columna">
                 <h3>Contacto</h3>
