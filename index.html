@@ -454,6 +454,93 @@ footer .lema {
     }
 }
 
+.footer-vecia {
+    background: #183b32;
+    color: #f4f0e6;
+    padding: 48px 0 20px;
+    text-align: left;
+}
+
+.footer-superior {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 35px;
+    padding-bottom: 35px;
+}
+
+.footer-identidad {
+    max-width: 280px;
+}
+
+.footer-vecia .footer-logo {
+    color: #f4f0e6;
+    letter-spacing: 2px;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.footer-vecia .lema {
+    color: #d8cbb3;
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.footer-columna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-columna h3 {
+    color: #b49a67;
+    font-size: 1.05rem;
+    margin-bottom: 5px;
+}
+
+.footer-columna a,
+.footer-columna button {
+    color: #e9e2d3;
+    font-family: inherit;
+    font-size: 0.84rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.footer-columna a:hover,
+.footer-columna button:hover {
+    color: #b49a67;
+}
+
+.footer-inferior {
+    border-top: 1px solid rgba(180,154,103,.3);
+    padding-top: 20px;
+    text-align: center;
+}
+
+@media(max-width:800px) {
+    .footer-superior {
+        grid-template-columns: repeat(2,1fr);
+        gap: 32px 22px;
+    }
+}
+
+@media(max-width:480px) {
+    .footer-superior {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 18px;
+    }
+
+    .footer-identidad {
+        grid-column: 1 / -1;
+        max-width: 100%;
+    }
+}
+
 </style>
 <link rel="stylesheet" href="cookies.css">
 <script src="cookies.js" defer></script>
