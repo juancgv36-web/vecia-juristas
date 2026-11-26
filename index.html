@@ -168,6 +168,8 @@ nav a:hover {
     background: var(--crema);
 }
 
+/* FOTOGRAFÍA Y VÍDEO */
+
 .portada-medios {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -192,46 +194,18 @@ nav a:hover {
 
 .video-marco {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    background: linear-gradient(145deg, #21483d, #102b24);
+    aspect-ratio: 9 / 16;
+    background: #102b24;
     border: 1px solid rgba(180,154,103,.65);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
+    overflow: hidden;
 }
 
-.video-pendiente {
-    color: var(--crema);
-}
-
-.video-pendiente .play {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    border: 1px solid var(--dorado);
-    border-radius: 50%;
-    color: var(--dorado);
-    font-size: 19px;
-    margin: 0 auto 15px;
-    padding-left: 3px;
-}
-
-.video-pendiente strong {
+.video-marco video {
     display: block;
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.video-pendiente small {
-    display: block;
-    color: #d4d4c9;
-    margin-top: 7px;
-    font-size: 11px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #102b24;
 }
 
 /* CITA DE ULPIANO */
@@ -501,6 +475,8 @@ nav a:hover {
     color: var(--dorado);
 }
 
+/* ICONOS DE REDES */
+
 .redes-iconos {
     display: flex;
     align-items: center;
@@ -608,7 +584,8 @@ nav a:hover {
     }
 
     .video-presentacion {
-        max-width: 520px;
+        width: 100%;
+        max-width: 430px;
         margin: 0 auto;
     }
 
@@ -645,6 +622,8 @@ nav a:hover {
         gap: 10px;
     }
 }
+
+/* ACCESIBILIDAD */
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -686,6 +665,8 @@ nav a:hover {
 
 <main>
 
+<!-- PORTADA -->
+
 <section class="portada">
     <div class="contenedor portada-contenido">
 
@@ -712,17 +693,18 @@ nav a:hover {
 
             <div class="video-presentacion">
                 <div class="video-marco">
-                    <div class="video-pendiente">
-                        <span class="play" aria-hidden="true">▶</span>
-                        <strong>Vídeo de presentación</strong>
-                        <small>Próximamente en VECIA Juristas</small>
-                    </div>
+                    <video controls playsinline preload="metadata">
+                        <source src="VID-20261126-WA0009.mp4" type="video/mp4">
+                        Tu navegador no permite reproducir este vídeo.
+                    </video>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
+<!-- CITA DE ULPIANO -->
 
 <section class="frase">
     <div class="contenedor">
@@ -735,6 +717,8 @@ nav a:hover {
     </div>
 </section>
 
+<!-- PRESENTACIÓN -->
+
 <section class="seccion">
     <div class="contenedor presentacion">
 
@@ -742,6 +726,7 @@ nav a:hover {
             <p class="etiqueta" style="color:var(--burdeos)">
                 Una forma de entender el Derecho
             </p>
+
             <h2>Conocimiento, criterio y compromiso.</h2>
         </div>
 
@@ -765,10 +750,13 @@ nav a:hover {
     </div>
 </section>
 
+<!-- ACCESOS PRINCIPALES -->
+
 <section class="seccion accesos">
     <div class="contenedor">
 
         <p class="etiqueta">Explora VECIA Juristas</p>
+
         <h2>El Derecho, desde<br>distintas perspectivas.</h2>
 
         <div class="accesos-grid">
@@ -776,21 +764,30 @@ nav a:hover {
             <a href="quienes-somos.html" class="acceso">
                 <div class="numero">01</div>
                 <h3>¿Quiénes somos?</h3>
-                <p>Conoce el origen, la filosofía y la identidad de VECIA Juristas.</p>
+                <p>
+                    Conoce el origen, la filosofía y la identidad
+                    de VECIA Juristas.
+                </p>
                 <span class="mas">Conócenos →</span>
             </a>
 
             <a href="servicios.html" class="acceso">
                 <div class="numero">02</div>
                 <h3>Servicios jurídicos y consultoría</h3>
-                <p>Descubre nuestras áreas de trabajo y posibilidades de asesoramiento.</p>
+                <p>
+                    Descubre nuestras áreas de trabajo y posibilidades
+                    de asesoramiento.
+                </p>
                 <span class="mas">Ver servicios →</span>
             </a>
 
             <a href="articulos.html" class="acceso">
                 <div class="numero">03</div>
                 <h3>Artículos y legislación</h3>
-                <p>Análisis, comentarios y reflexiones sobre el mundo jurídico.</p>
+                <p>
+                    Análisis, comentarios y reflexiones sobre
+                    el mundo jurídico.
+                </p>
                 <span class="mas">Leer artículos →</span>
             </a>
 
@@ -798,10 +795,15 @@ nav a:hover {
     </div>
 </section>
 
+<!-- FUENTES OFICIALES -->
+
 <section class="seccion" id="legislacion">
     <div class="contenedor">
 
-        <p class="etiqueta" style="color:var(--burdeos)">Fuentes oficiales</p>
+        <p class="etiqueta" style="color:var(--burdeos)">
+            Fuentes oficiales
+        </p>
+
         <h2>Legislación y jurisprudencia.</h2>
 
         <p class="presentacion-texto" style="margin-top:20px; max-width:750px;">
@@ -812,40 +814,62 @@ nav a:hover {
 
         <div class="accesos-grid fuentes-grid">
 
-            <a href="https://www.boe.es/"
-               class="acceso" target="_blank" rel="noopener noreferrer">
+            <a
+                href="https://www.boe.es/"
+                class="acceso"
+                target="_blank"
+                rel="noopener noreferrer">
+
                 <div class="numero">01</div>
                 <h3>BOE</h3>
                 <p>Boletín Oficial del Estado.</p>
                 <span class="mas">Consultar BOE →</span>
             </a>
 
-            <a href="https://www.boe.es/buscar/legislacion.php"
-               class="acceso" target="_blank" rel="noopener noreferrer">
+            <a
+                href="https://www.boe.es/buscar/legislacion.php"
+                class="acceso"
+                target="_blank"
+                rel="noopener noreferrer">
+
                 <div class="numero">02</div>
                 <h3>Legislación consolidada</h3>
-                <p>Consulta de normas con sus modificaciones incorporadas.</p>
+                <p>
+                    Consulta de normas con sus modificaciones incorporadas.
+                </p>
                 <span class="mas">Consultar legislación →</span>
             </a>
 
-            <a href="https://miprincipado.asturias.es/ast/bopa/"
-               class="acceso" target="_blank" rel="noopener noreferrer">
+            <a
+                href="https://miprincipado.asturias.es/ast/bopa/"
+                class="acceso"
+                target="_blank"
+                rel="noopener noreferrer">
+
                 <div class="numero">03</div>
                 <h3>BOPA</h3>
                 <p>Boletín Oficial del Principado de Asturias.</p>
                 <span class="mas">Consultar BOPA →</span>
             </a>
 
-            <a href="https://eur-lex.europa.eu/oj/direct-access.html?locale=es"
-               class="acceso" target="_blank" rel="noopener noreferrer">
+            <a
+                href="https://eur-lex.europa.eu/oj/direct-access.html?locale=es"
+                class="acceso"
+                target="_blank"
+                rel="noopener noreferrer">
+
                 <div class="numero">04</div>
                 <h3>DOUE</h3>
                 <p>Diario Oficial de la Unión Europea.</p>
                 <span class="mas">Consultar DOUE →</span>
             </a>
 
-            <a href="https://www.poderjudicial.es/search/indexAN.jsp"
-               class="acceso" target="_blank" rel="noopener noreferrer">
+            <a
+                href="https://www.poderjudicial.es/search/indexAN.jsp"
+                class="acceso"
+                target="_blank"
+                rel="noopener noreferrer">
+
                 <div class="numero">05</div>
                 <h3>CENDOJ</h3>
                 <p>
@@ -859,6 +883,8 @@ nav a:hover {
     </div>
 </section>
 
+<!-- CONTACTO -->
+
 <section class="seccion contacto" id="contacto">
     <div class="contenedor contacto-contenido">
 
@@ -866,7 +892,9 @@ nav a:hover {
             <p class="etiqueta" style="color:var(--burdeos)">
                 Estamos en contacto
             </p>
+
             <h2>Hablemos.</h2>
+
             <p class="contacto-texto">
                 Para consultas e información, puedes ponerte en contacto
                 a través del teléfono o del correo electrónico.
@@ -899,10 +927,14 @@ nav a:hover {
 
 </main>
 
+<!-- PIE DE PÁGINA -->
+
 <footer class="footer-vecia">
     <div class="contenedor">
 
         <div class="footer-superior">
+
+            <!-- IDENTIDAD -->
 
             <div class="footer-identidad">
                 <img
@@ -915,11 +947,20 @@ nav a:hover {
                 </p>
             </div>
 
+            <!-- INFORMACIÓN LEGAL -->
+
             <div class="footer-columna">
                 <h3>Legal</h3>
+
                 <a href="aviso-legal.html">Aviso legal</a>
-                <a href="politica-privacidad.html">Política de privacidad</a>
-                <a href="politica-cookies.html">Política de cookies</a>
+
+                <a href="politica-privacidad.html">
+                    Política de privacidad
+                </a>
+
+                <a href="politica-cookies.html">
+                    Política de cookies
+                </a>
 
                 <button
                     type="button"
@@ -927,6 +968,8 @@ nav a:hover {
                     Configurar cookies
                 </button>
             </div>
+
+            <!-- REDES SOCIALES -->
 
             <div class="footer-columna">
                 <h3>Redes</h3>
@@ -938,6 +981,7 @@ nav a:hover {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram">
+
                         <img
                             src="https://cdn.simpleicons.org/instagram/e9e2d3"
                             alt="">
@@ -948,6 +992,7 @@ nav a:hover {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="X">
+
                         <img
                             src="https://cdn.simpleicons.org/x/e9e2d3"
                             alt="">
@@ -958,6 +1003,7 @@ nav a:hover {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="TikTok">
+
                         <img
                             src="https://cdn.simpleicons.org/tiktok/e9e2d3"
                             alt="">
@@ -968,6 +1014,7 @@ nav a:hover {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn">
+
                         <img
                             src="https://api.iconify.design/mdi/linkedin.svg?color=%23e9e2d3"
                             alt="">
@@ -975,6 +1022,8 @@ nav a:hover {
 
                 </div>
             </div>
+
+            <!-- CONTACTO -->
 
             <div class="footer-columna">
                 <h3>Contacto</h3>
@@ -998,7 +1047,9 @@ nav a:hover {
         </div>
 
         <div class="footer-inferior">
-            <p>© 2026 VECIA Juristas. Todos los derechos reservados.</p>
+            <p>
+                © 2026 VECIA Juristas. Todos los derechos reservados.
+            </p>
         </div>
 
     </div>
