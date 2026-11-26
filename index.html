@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,12 +8,17 @@
 <title>VECIA Juristas | Inicio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="cookies.css">
+<script src="cookies.js" defer></script>
 
 <style>
 :root {
     --verde: #183b32;
     --verde-claro: #294d42;
+    --verde-profundo: #122c25;
     --crema: #f4f0e6;
     --papel: #e9e2d3;
     --burdeos: #713c46;
@@ -38,13 +44,21 @@ body {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
 }
 
 .contenedor {
     width: min(1160px, 90%);
-    margin: auto;
+    margin: 0 auto;
 }
 
 /* CABECERA */
@@ -56,26 +70,32 @@ header {
 }
 
 .cabecera {
-    min-height: 100px;
+    min-height: 112px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.logo-enlace {
+    display: block;
+    flex: 0 1 235px;
+    line-height: 0;
 }
 
 .logo-imagen {
     display: block;
-    width: 205px;
-    max-width: 100%;
+    width: 225px;
     height: auto;
-    background: var(--crema);
-    padding: 5px;
 }
 
 nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 22px;
+    justify-content: flex-end;
+    gap: 12px 22px;
 }
 
 nav a {
@@ -83,6 +103,7 @@ nav a {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #e8e2d7;
+    transition: color .2s ease;
 }
 
 nav a:hover {
@@ -94,14 +115,14 @@ nav a:hover {
 .portada {
     background: var(--verde);
     color: var(--crema);
-    padding: 85px 0 95px;
+    padding: 72px 0 82px;
 }
 
 .portada-contenido {
     display: grid;
-    grid-template-columns: 1.05fr .95fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 55px;
+    gap: 58px;
 }
 
 .etiqueta {
@@ -110,11 +131,7 @@ nav a:hover {
     letter-spacing: 3px;
     font-size: 11px;
     font-weight: 700;
-    margin-bottom: 24px;
-}
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+    margin-bottom: 22px;
 }
 
 .portada h1 {
@@ -133,7 +150,7 @@ h1, h2, h3 {
     max-width: 520px;
     color: #dedbd0;
     font-size: 16px;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
 }
 
 .boton {
@@ -145,19 +162,18 @@ h1, h2, h3 {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1.5px;
+    transition: background .2s ease;
 }
 
 .boton:hover {
     background: var(--crema);
 }
 
-/* FOTOGRAFÍA Y VÍDEO */
-
 .portada-medios {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 18px;
+    gap: 22px;
     min-width: 0;
 }
 
@@ -165,10 +181,9 @@ h1, h2, h3 {
     display: block;
     width: 100%;
     height: auto;
-    max-width: 100%;
     object-fit: contain;
-    border: 6px solid rgba(244,240,230,.12);
-    box-shadow: 12px 12px 0 rgba(180,154,103,.2);
+    border: 7px solid rgba(244,240,230,.12);
+    box-shadow: 12px 12px 0 rgba(180,154,103,.18);
 }
 
 .video-presentacion {
@@ -179,48 +194,45 @@ h1, h2, h3 {
 .video-marco {
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: #102a23;
+    background: linear-gradient(145deg, #21483d, #102b24);
     border: 1px solid rgba(180,154,103,.65);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
 .video-pendiente {
     color: var(--crema);
-    font-size: 13px;
 }
 
 .video-pendiente .play {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 43px;
-    height: 43px;
-    margin: 0 auto 12px;
+    width: 52px;
+    height: 52px;
     border: 1px solid var(--dorado);
     border-radius: 50%;
     color: var(--dorado);
-    font-size: 17px;
+    font-size: 19px;
+    margin: 0 auto 15px;
+    padding-left: 3px;
+}
+
+.video-pendiente strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .video-pendiente small {
     display: block;
-    color: #c9c4b8;
-    font-size: 10px;
-    margin-top: 6px;
-}
-
-/* Cuando tengas el enlace de inserción del vídeo,
-   sustituiremos el espacio provisional por un iframe. */
-
-.video-presentacion iframe {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: 1px solid rgba(180,154,103,.65);
+    color: #d4d4c9;
+    margin-top: 7px;
+    font-size: 11px;
 }
 
 /* FRASE */
@@ -308,7 +320,7 @@ h1, h2, h3 {
     padding: 32px 27px;
     border: 1px solid rgba(180,154,103,.4);
     min-height: 230px;
-    transition: .2s;
+    transition: background .2s ease, transform .2s ease;
 }
 
 .acceso:hover {
@@ -341,6 +353,21 @@ h1, h2, h3 {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* FUENTES OFICIALES */
+
+.fuentes-grid .acceso {
+    color: var(--verde);
+    border-color: var(--dorado);
+}
+
+.fuentes-grid .acceso p {
+    color: var(--tinta);
+}
+
+.fuentes-grid .acceso:hover {
+    background: #f8f4eb;
 }
 
 /* CONTACTO */
@@ -401,13 +428,16 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
-/* PIE */
+.boton-whatsapp:hover {
+    background: #854b56;
+}
+
+/* PIE DE PÁGINA */
 
 .footer-vecia {
-    background: #183b32;
-    color: #f4f0e6;
+    background: var(--verde-profundo);
+    color: var(--crema);
     padding: 48px 0 20px;
-    text-align: left;
 }
 
 .footer-superior {
@@ -423,17 +453,15 @@ h1, h2, h3 {
 
 .footer-logo-imagen {
     display: block;
-    width: 190px;
+    width: 235px;
     max-width: 100%;
     height: auto;
-    background: var(--crema);
-    padding: 5px;
     margin-bottom: 12px;
 }
 
-.footer-vecia .lema {
+.footer-identidad .lema {
     color: #d8cbb3;
-    font-size: 0.88rem;
+    font-size: .88rem;
     line-height: 1.7;
 }
 
@@ -445,7 +473,7 @@ h1, h2, h3 {
 }
 
 .footer-columna h3 {
-    color: #b49a67;
+    color: var(--dorado);
     font-size: 1.05rem;
     margin-bottom: 5px;
 }
@@ -454,7 +482,7 @@ h1, h2, h3 {
 .footer-columna button {
     color: #e9e2d3;
     font-family: inherit;
-    font-size: 0.84rem;
+    font-size: .84rem;
     text-decoration: none;
     background: none;
     border: none;
@@ -465,21 +493,8 @@ h1, h2, h3 {
 
 .footer-columna a:hover,
 .footer-columna button:hover {
-    color: #b49a67;
+    color: var(--dorado);
 }
-
-.footer-inferior {
-    border-top: 1px solid rgba(180,154,103,.3);
-    padding-top: 20px;
-    text-align: center;
-}
-
-.footer-inferior p {
-    font-size: 12px;
-    color: #bdb9ad;
-}
-
-/* REDES SOCIALES */
 
 .redes-iconos {
     display: flex;
@@ -506,132 +521,126 @@ h1, h2, h3 {
     opacity: .7;
 }
 
-/* RESPONSIVE */
+.footer-inferior {
+    border-top: 1px solid rgba(180,154,103,.3);
+    padding-top: 20px;
+    text-align: center;
+}
 
-@media (max-width: 800px) {
+.footer-inferior p {
+    color: #bdb9ad;
+    font-size: 12px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
     .cabecera {
-        padding: 22px 0;
         flex-direction: column;
+        justify-content: center;
+        padding: 18px 0 20px;
+    }
+
+    .logo-enlace {
+        flex-basis: auto;
+    }
+
+    .logo-imagen {
+        width: 205px;
     }
 
     nav {
         justify-content: center;
-        gap: 13px 17px;
+        gap: 12px 17px;
     }
 
-    nav a {
-        font-size: 10px;
+    .portada-contenido {
+        grid-template-columns: 1fr;
+        gap: 38px;
     }
 
-    .portada {
-        padding: 55px 0 65px;
+    .portada-medios {
+        max-width: 760px;
+        margin: 0 auto;
     }
 
-    .portada-contenido,
     .presentacion,
     .contacto-contenido {
         grid-template-columns: 1fr;
         gap: 35px;
     }
 
-    /* En móvil: primero el retrato y debajo el vídeo */
-    .portada-medios {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        max-width: 520px;
-        margin: 0 auto;
-    }
-
-    .foto-portada {
-        width: 100%;
-    }
-
-    .video-presentacion {
-        width: 100%;
-    }
-
     .accesos-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .seccion {
-        padding: 65px 0;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-superior {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 32px 22px;
     }
 }
 
-@media (max-width: 480px) {
-    .logo-imagen {
-        width: 185px;
+/* MÓVILES */
+
+@media (max-width: 560px) {
+    .contenedor {
+        width: min(92%, 1160px);
     }
 
+    .portada {
+        padding: 48px 0 58px;
+    }
+
+    .portada-medios {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .foto-portada {
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto;
+    }
+
+    .video-presentacion {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .seccion {
+        padding: 62px 0;
+    }
+
+    .accesos-grid,
     .footer-superior {
-        grid-template-columns: 1fr 1fr;
-        gap: 28px 18px;
+        grid-template-columns: 1fr;
     }
 
     .footer-identidad {
-        grid-column: 1 / -1;
         max-width: 100%;
-    }
-
-    .footer-logo-imagen {
-        width: 180px;
     }
 
     .datos-contacto {
         padding: 25px;
     }
+
+    .footer-columna {
+        gap: 10px;
+    }
 }
 
-/* ENLACES LEGALES */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 
-.enlaces-legales {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px 28px;
-    margin-top: 28px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(180,154,103,.28);
-}
-
-.enlaces-legales a,
-.enlaces-legales button {
-    color: #e9e2d3;
-    font-family: inherit;
-    font-size: 0.82rem;
-    text-decoration: none;
-    background: none;
-    border: none;
-    padding: 5px 0;
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-.enlaces-legales a:hover,
-.enlaces-legales button:hover {
-    color: #b49a67;
-    opacity: 1;
-}
-
-@media (max-width: 600px) {
-    .enlaces-legales {
-        flex-direction: column;
-        gap: 9px;
-        margin-top: 22px;
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
     }
 }
 </style>
-
-<link rel="stylesheet" href="cookies.css">
-<script src="cookies.js" defer></script>
-
 </head>
 
 <body>
@@ -639,14 +648,14 @@ h1, h2, h3 {
 <header>
     <div class="contenedor cabecera">
 
-        <a href="index.html" aria-label="VECIA Juristas - Inicio">
+        <a href="index.html" class="logo-enlace" aria-label="VECIA Juristas - Inicio">
             <img
                 class="logo-imagen"
-                src="file_000000008df88243a5837f4a275136e6.png"
+                src="file_000000002830821083beadcdcef6b47f.png"
                 alt="VECIA Juristas. Asesoramiento, consultoría y mucho más Derecho">
         </a>
 
-        <nav>
+        <nav aria-label="Navegación principal">
             <a href="index.html">Inicio</a>
             <a href="quienes-somos.html">Quiénes somos</a>
             <a href="servicios.html">Servicios</a>
@@ -666,10 +675,7 @@ h1, h2, h3 {
         <div>
             <p class="etiqueta">Derecho · Asesoramiento · Consultoría</p>
 
-            <h1>
-                El Derecho,<br>
-                con otra <span>mirada.</span>
-            </h1>
+            <h1>El Derecho,<br>con otra <span>mirada.</span></h1>
 
             <p class="portada-texto">
                 Asesoramiento, consultoría y mucho + Derecho.
@@ -677,9 +683,7 @@ h1, h2, h3 {
                 la reflexión y el conocimiento del mundo del Derecho.
             </p>
 
-            <a href="quienes-somos.html" class="boton">
-                Conoce VECIA
-            </a>
+            <a href="quienes-somos.html" class="boton">Conoce VECIA</a>
         </div>
 
         <div class="portada-medios">
@@ -692,15 +696,14 @@ h1, h2, h3 {
             <div class="video-presentacion">
                 <div class="video-marco">
                     <div class="video-pendiente">
-                        <span class="play">▶</span>
-                        **Vídeo de presentación**
+                        <span class="play" aria-hidden="true">▶</span>
+                        <strong>Vídeo de presentación</strong>
                         <small>Próximamente en VECIA Juristas</small>
                     </div>
                 </div>
             </div>
 
         </div>
-
     </div>
 </section>
 
@@ -726,14 +729,14 @@ h1, h2, h3 {
 
         <div class="presentacion-texto">
             <p>
-                VECIA Juristas nace como un espacio personal
-                dedicado al Derecho, el asesoramiento y la consultoría.
+                VECIA Juristas nace como un espacio personal dedicado
+                al Derecho, el asesoramiento y la consultoría.
             </p>
 
             <p>
-                Una iniciativa que busca acercar el conocimiento
-                jurídico y fomentar una comprensión rigurosa
-                y reflexiva de las cuestiones legales.
+                Una iniciativa que busca acercar el conocimiento jurídico
+                y fomentar una comprensión rigurosa y reflexiva
+                de las cuestiones legales.
             </p>
 
             <a href="quienes-somos.html" class="enlace">
@@ -755,30 +758,21 @@ h1, h2, h3 {
             <a href="quienes-somos.html" class="acceso">
                 <div class="numero">01</div>
                 <h3>¿Quiénes somos?</h3>
-                <p>
-                    Conoce el origen, la filosofía y la identidad
-                    de VECIA Juristas.
-                </p>
+                <p>Conoce el origen, la filosofía y la identidad de VECIA Juristas.</p>
                 <span class="mas">Conócenos →</span>
             </a>
 
             <a href="servicios.html" class="acceso">
                 <div class="numero">02</div>
                 <h3>Servicios jurídicos y consultoría</h3>
-                <p>
-                    Descubre nuestras áreas de trabajo y
-                    posibilidades de asesoramiento.
-                </p>
+                <p>Descubre nuestras áreas de trabajo y posibilidades de asesoramiento.</p>
                 <span class="mas">Ver servicios →</span>
             </a>
 
             <a href="articulos.html" class="acceso">
                 <div class="numero">03</div>
                 <h3>Artículos y legislación</h3>
-                <p>
-                    Análisis, comentarios y reflexiones
-                    sobre el mundo jurídico.
-                </p>
+                <p>Análisis, comentarios y reflexiones sobre el mundo jurídico.</p>
                 <span class="mas">Leer artículos →</span>
             </a>
 
@@ -789,81 +783,56 @@ h1, h2, h3 {
 <section class="seccion" id="legislacion">
     <div class="contenedor">
 
-        <p class="etiqueta" style="color:var(--burdeos)">
-            Fuentes oficiales
-        </p>
-
-        <h2>Legislación y Jurisprudencia.</h2>
+        <p class="etiqueta" style="color:var(--burdeos)">Fuentes oficiales</p>
+        <h2>Legislación y jurisprudencia.</h2>
 
         <p class="presentacion-texto" style="margin-top:20px; max-width:750px;">
-            Acceso directo a las principales publicaciones
-            oficiales y herramientas de consulta normativa
-            de España, Asturias y la Unión Europea.
+            Acceso directo a las principales publicaciones oficiales
+            y herramientas de consulta normativa de España,
+            Asturias y la Unión Europea.
         </p>
 
-        <div class="accesos-grid">
+        <div class="accesos-grid fuentes-grid">
 
             <a href="https://www.boe.es/"
-               class="acceso"
-               target="_blank"
-               rel="noopener noreferrer"
-               style="color:var(--verde); border-color:var(--dorado);">
+               class="acceso" target="_blank" rel="noopener noreferrer">
                 <div class="numero">01</div>
                 <h3>BOE</h3>
-                <p style="color:var(--tinta);">
-                    Boletín Oficial del Estado.
-                </p>
+                <p>Boletín Oficial del Estado.</p>
                 <span class="mas">Consultar BOE →</span>
             </a>
 
             <a href="https://www.boe.es/buscar/legislacion.php"
-               class="acceso"
-               target="_blank"
-               rel="noopener noreferrer"
-               style="color:var(--verde); border-color:var(--dorado);">
+               class="acceso" target="_blank" rel="noopener noreferrer">
                 <div class="numero">02</div>
                 <h3>Legislación consolidada</h3>
-                <p style="color:var(--tinta);">
-                    Consulta de normas con sus modificaciones incorporadas.
-                </p>
+                <p>Consulta de normas con sus modificaciones incorporadas.</p>
                 <span class="mas">Consultar legislación →</span>
             </a>
 
             <a href="https://miprincipado.asturias.es/ast/bopa/"
-               class="acceso"
-               target="_blank"
-               rel="noopener noreferrer"
-               style="color:var(--verde); border-color:var(--dorado);">
+               class="acceso" target="_blank" rel="noopener noreferrer">
                 <div class="numero">03</div>
                 <h3>BOPA</h3>
-                <p style="color:var(--tinta);">
-                    Boletín Oficial del Principado de Asturias.
-                </p>
+                <p>Boletín Oficial del Principado de Asturias.</p>
                 <span class="mas">Consultar BOPA →</span>
             </a>
 
             <a href="https://eur-lex.europa.eu/oj/direct-access.html?locale=es"
-               class="acceso"
-               target="_blank"
-               rel="noopener noreferrer"
-               style="color:var(--verde); border-color:var(--dorado);">
+               class="acceso" target="_blank" rel="noopener noreferrer">
                 <div class="numero">04</div>
                 <h3>DOUE</h3>
-                <p style="color:var(--tinta);">
-                    Diario Oficial de la Unión Europea.
-                </p>
+                <p>Diario Oficial de la Unión Europea.</p>
                 <span class="mas">Consultar DOUE →</span>
             </a>
 
             <a href="https://www.poderjudicial.es/search/indexAN.jsp"
-               class="acceso"
-               target="_blank"
-               rel="noopener noreferrer"
-               style="color:var(--verde); border-color:var(--dorado);">
+               class="acceso" target="_blank" rel="noopener noreferrer">
                 <div class="numero">05</div>
                 <h3>CENDOJ</h3>
-                <p style="color:var(--tinta);">
-                    Centro de Documentación Judicial. Consulta de jurisprudencia y resoluciones judiciales.
+                <p>
+                    Centro de Documentación Judicial.
+                    Consulta de jurisprudencia y resoluciones judiciales.
                 </p>
                 <span class="mas">Consultar jurisprudencia →</span>
             </a>
@@ -879,13 +848,10 @@ h1, h2, h3 {
             <p class="etiqueta" style="color:var(--burdeos)">
                 Estamos en contacto
             </p>
-
             <h2>Hablemos.</h2>
-
             <p class="contacto-texto">
-                Para consultas e información, puedes ponerte
-                en contacto a través del teléfono o del correo
-                electrónico.
+                Para consultas e información, puedes ponerte en contacto
+                a través del teléfono o del correo electrónico.
             </p>
         </div>
 
@@ -898,20 +864,18 @@ h1, h2, h3 {
 
             <div class="dato">
                 <small>Correo electrónico</small>
-                <a href="mailto:juancgv36@gmail.com">
-                    juancgv36@gmail.com
-                </a>
+                <a href="mailto:juancgv36@gmail.com">juancgv36@gmail.com</a>
             </div>
 
-            <a class="boton-whatsapp"
-               href="https://wa.me/34634260689"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+                class="boton-whatsapp"
+                href="https://wa.me/34634260689"
+                target="_blank"
+                rel="noopener noreferrer">
                 Contactar por WhatsApp
             </a>
 
         </div>
-
     </div>
 </section>
 
@@ -925,7 +889,7 @@ h1, h2, h3 {
             <div class="footer-identidad">
                 <img
                     class="footer-logo-imagen"
-                    src="file_000000008df88243a5837f4a275136e6.png"
+                    src="file_000000002830821083beadcdcef6b47f.png"
                     alt="VECIA Juristas">
 
                 <p class="lema">
@@ -938,7 +902,9 @@ h1, h2, h3 {
                 <a href="aviso-legal.html">Aviso legal</a>
                 <a href="politica-privacidad.html">Política de privacidad</a>
                 <a href="politica-cookies.html">Política de cookies</a>
-                <button type="button"
+
+                <button
+                    type="button"
                     onclick="window.VECIAConsent && window.VECIAConsent.openSettings()">
                     Configurar cookies
                 </button>
@@ -948,33 +914,47 @@ h1, h2, h3 {
                 <h3>Redes</h3>
 
                 <div class="redes-iconos">
-                    <a href="https://www.instagram.com/vecia_juancgv/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Instagram">
-                        <img src="https://cdn.simpleicons.org/instagram/e9e2d3" alt="Instagram">
+
+                    <a
+                        href="https://www.instagram.com/vecia_juancgv/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <img
+                            src="https://cdn.simpleicons.org/instagram/e9e2d3"
+                            alt="">
                     </a>
 
-                    <a href="https://x.com/Vecia_juristas"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="X">
-                        <img src="https://cdn.simpleicons.org/x/e9e2d3" alt="X">
+                    <a
+                        href="https://x.com/Vecia_juristas"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="X">
+                        <img
+                            src="https://cdn.simpleicons.org/x/e9e2d3"
+                            alt="">
                     </a>
 
-                    <a href="https://www.tiktok.com/@vecia.juristas"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="TikTok">
-                        <img src="https://cdn.simpleicons.org/tiktok/e9e2d3" alt="TikTok">
+                    <a
+                        href="https://www.tiktok.com/@vecia.juristas"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="TikTok">
+                        <img
+                            src="https://cdn.simpleicons.org/tiktok/e9e2d3"
+                            alt="">
                     </a>
 
-                    <a href="https://www.linkedin.com/in/juan-carlos-garcía-vega-58001a359/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="LinkedIn">
-                        <img src="https://api.iconify.design/mdi/linkedin.svg?color=%23e9e2d3" alt="LinkedIn">
+                    <a
+                        href="https://www.linkedin.com/in/juan-carlos-garcía-vega-58001a359/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <img
+                            src="https://api.iconify.design/mdi/linkedin.svg?color=%23e9e2d3"
+                            alt="">
                     </a>
+
                 </div>
             </div>
 
@@ -989,9 +969,10 @@ h1, h2, h3 {
                     634 260 689
                 </a>
 
-                <a href="https://wa.me/34634260689"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://wa.me/34634260689"
+                    target="_blank"
+                    rel="noopener noreferrer">
                     WhatsApp
                 </a>
             </div>
