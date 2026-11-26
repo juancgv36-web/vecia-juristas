@@ -75,8 +75,7 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px 0;
 }
 
 .logo-enlace {
@@ -235,28 +234,34 @@ nav a:hover {
     font-size: 11px;
 }
 
-/* FRASE */
+/* CITA DE ULPIANO */
 
 .frase {
     background: var(--papel);
-    padding: 48px 0;
+    padding: 55px 20px;
     text-align: center;
+    border-bottom: 1px solid rgba(180,154,103,.35);
 }
 
-.frase p {
+.frase blockquote {
     font-family: 'Playfair Display', serif;
     font-size: clamp(21px, 3vw, 30px);
+    line-height: 1.55;
     color: var(--verde);
-    max-width: 850px;
-    margin: auto;
+    max-width: 950px;
+    margin: 0 auto;
+    font-weight: 400;
 }
 
-.frase span {
+.frase cite {
     display: block;
-    margin-top: 14px;
+    margin-top: 20px;
     color: var(--burdeos);
+    font-family: 'DM Sans', sans-serif;
     font-size: 11px;
-    letter-spacing: 3px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 4px;
     text-transform: uppercase;
 }
 
@@ -607,6 +612,18 @@ nav a:hover {
         margin: 0 auto;
     }
 
+    .frase {
+        padding: 42px 20px;
+    }
+
+    .frase blockquote {
+        font-size: 21px;
+    }
+
+    .frase cite {
+        letter-spacing: 3px;
+    }
+
     .seccion {
         padding: 62px 0;
     }
@@ -709,11 +726,12 @@ nav a:hover {
 
 <section class="frase">
     <div class="contenedor">
-        <p>
-            El Derecho no es solamente un conjunto de normas:
-            también es una forma de comprender la realidad.
-        </p>
-        <span>VECIA Juristas</span>
+        <blockquote>
+            «Los preceptos del derecho son estos: vivir honestamente,
+            no dañar a otro y dar a cada uno lo suyo».
+        </blockquote>
+
+        <cite>Domicio Ulpiano</cite>
     </div>
 </section>
 
