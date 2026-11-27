@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Análisis del régimen jurídico español de reconocimiento de las adopciones internacionales, el Convenio de La Haya de 1993 y la Ley 54/2007.">
+
+<title>El régimen jurídico del reconocimiento de las adopciones internacionales (I) | VECIA Juristas</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="cookies.css">
+<script src="cookies.js" defer></script>
+
+<style>
+:root {
+    --verde:#183b32;
+    --verde-claro:#294d42;
+    --crema:#f4f0e6;
+    --papel:#e9e2d3;
+    --burdeos:#713c46;
+    --dorado:#b49a67;
+    --tinta:#252b27;
+}
+
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    background:var(--crema);
+    color:var(--tinta);
+    font-family:'DM Sans',sans-serif;
+    line-height:1.8;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+.contenedor {
+    width:min(1160px,90%);
+    margin:auto;
+}
+
+/* CABECERA */
+
+header {
+    background:var(--verde);
+    color:var(--crema);
+    border-bottom:1px solid rgba(180,154,103,.45);
+}
+
+.cabecera {
+    min-height:100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.logo {
+    font-family:'Playfair Display',serif;
+    font-size:35px;
+    letter-spacing:5px;
+}
+
+.logo span {
+    color:var(--dorado);
+}
+
+nav {
+    display:flex;
+    flex-wrap:wrap;
+    gap:22px;
+}
+
+nav a {
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#e8e2d7;
+}
+
+nav a:hover,
+nav a.activo {
+    color:var(--dorado);
+}
+
+/* PORTADA DEL ARTÍCULO */
+
+.hero {
+    background:var(--verde);
+    color:var(--crema);
+    padding:75px 0 85px;
+}
+
+.etiqueta {
+    color:var(--dorado);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:11px;
+    font-weight:700;
+    margin-bottom:22px;
+}
+
+.hero h1 {
+    font-family:'Playfair Display',serif;
+    font-size:clamp(36px,5.5vw,62px);
+    line-height:1.2;
+    font-weight:500;
+    max-width:1000px;
+}
+
+.hero h1 span {
+    color:var(--dorado);
+    font-style:italic;
+}
+
+.hero .descripcion {
+    max-width:760px;
+    color:#dedbd0;
+    margin-top:25px;
+    font-size:15px;
+}
+
+.datos-articulo {
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid rgba(180,154,103,.35);
+    color:#d8d4c9;
+    font-size:12px;
+    letter-spacing:.5px;
+}
+
+/* CUERPO */
+
+.articulo-contenedor {
+    width:min(850px,90%);
+    margin:auto;
+    padding:75px 0 90px;
+}
+
+.cita {
+    border-left:3px solid var(--dorado);
+    padding:10px 0 10px 28px;
+    margin-bottom:55px;
+}
+
+.cita blockquote {
+    font-family:'Playfair Display',serif;
+    font-size:clamp(22px,3vw,29px);
+    line-height:1.5;
+    color:var(--verde);
+    font-style:italic;
+}
+
+.cita p {
+    margin-top:15px;
+    color:var(--burdeos);
+    font-size:13px;
+    font-weight:600;
+}
+
+.contenido h2 {
+    font-family:'Playfair Display',serif;
+    color:var(--verde);
+    font-size:34px;
+    line-height:1.25;
+    font-weight:500;
+    margin:0 0 25px;
+}
+
+.contenido p {
+    color:#4e514b;
+    font-size:16px;
+    margin-bottom:23px;
+    text-align:justify;
+}
+
+.contenido ul {
+    padding-left:25px;
+    margin:5px 0 28px;
+}
+
+.contenido li {
+    color:#4e514b;
+    font-size:15px;
+    margin-bottom:17px;
+    padding-left:5px;
+}
+
+.contenido li::marker {
+    color:var(--dorado);
+}
+
+.contenido strong {
+    color:var(--verde);
+    font-weight:700;
+}
+
+.separador {
+    width:75px;
+    height:2px;
+    background:var(--dorado);
+    margin:55px 0;
+}
+
+/* FUENTES NORMATIVAS */
+
+.fuentes {
+    margin-top:70px;
+    padding:38px;
+    background:#ebe6da;
+    border-top:3px solid var(--burdeos);
+}
+
+.fuentes .etiqueta {
+    color:var(--burdeos);
+    margin-bottom:15px;
+}
+
+.fuentes h2 {
+    font-family:'Playfair Display',serif;
+    color:var(--verde);
+    font-size:32px;
+    line-height:1.25;
+    font-weight:500;
+    margin-bottom:18px;
+}
+
+.fuentes-intro {
+    color:#64645d;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.lista-fuentes {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.lista-fuentes li {
+    padding:19px 0;
+    border-top:1px solid rgba(113,60,70,.18);
+}
+
+.lista-fuentes strong {
+    display:block;
+    color:var(--verde);
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:7px;
+}
+
+.lista-fuentes p {
+    color:#68675f;
+    font-size:13px;
+    margin-bottom:9px;
+}
+
+.lista-fuentes a {
+    color:var(--burdeos);
+    font-size:12px;
+    font-weight:700;
+    border-bottom:1px solid var(--dorado);
+    padding-bottom:3px;
+}
+
+.lista-fuentes a:hover {
+    color:var(--verde);
+}
+
+.nota-fuentes {
+    margin-top:22px;
+    color:#777368;
+    font-size:11px;
+    line-height:1.6;
+}
+
+/* NAVEGACIÓN FINAL */
+
+.navegacion-articulo {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:55px;
+    padding-top:25px;
+    border-top:1px solid rgba(113,60,70,.2);
+}
+
+.volver {
+    color:var(--burdeos);
+    font-size:13px;
+    font-weight:700;
+    border-bottom:1px solid var(--dorado);
+    padding-bottom:5px;
+}
+
+.volver:hover {
+    color:var(--verde);
+}
+
+/* PIE */
+
+.footer-vecia {
+    background:#183b32;
+    color:#f4f0e6;
+    padding:48px 0 20px;
+    text-align:left;
+}
+
+.footer-superior {
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1.2fr;
+    gap:35px;
+    padding-bottom:35px;
+}
+
+.footer-identidad {
+    max-width:280px;
+}
+
+.footer-logo {
+    font-family:'Playfair Display',serif;
+    color:#f4f0e6;
+    letter-spacing:2px;
+    font-size:1.15rem;
+    margin-bottom:10px;
+}
+
+.lema {
+    color:#d8cbb3;
+    font-size:.88rem;
+    line-height:1.7;
+}
+
+.footer-columna {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.footer-columna h3 {
+    font-family:'Playfair Display',serif;
+    color:#b49a67;
+    font-size:1.05rem;
+    margin-bottom:5px;
+}
+
+.footer-columna a,
+.footer-columna button {
+    color:#e9e2d3;
+    font-family:inherit;
+    font-size:.84rem;
+    background:none;
+    border:none;
+    padding:0;
+    cursor:pointer;
+    text-align:left;
+}
+
+.footer-columna a:hover,
+.footer-columna button:hover {
+    color:#b49a67;
+}
+
+.footer-inferior {
+    border-top:1px solid rgba(180,154,103,.3);
+    padding-top:20px;
+    text-align:center;
+}
+
+.footer-inferior p {
+    font-size:12px;
+    color:#bdb9ad;
+}
+
+.redes-iconos {
+    display:flex;
+    align-items:center;
+    gap:17px;
+}
+
+.redes-iconos a {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:25px;
+    height:25px;
+}
+
+.redes-iconos img {
+    width:21px;
+    height:21px;
+    transition:transform .2s ease,opacity .2s ease;
+}
+
+.redes-iconos a:hover img {
+    transform:translateY(-3px);
+    opacity:.7;
+}
+
+/* MÓVILES */
+
+@media(max-width:800px) {
+    .cabecera {
+        padding:22px 0;
+        flex-direction:column;
+    }
+
+    nav {
+        justify-content:center;
+        gap:13px 17px;
+    }
+
+    nav a {
+        font-size:10px;
+    }
+
+    .articulo-contenedor {
+        padding:55px 0 70px;
+    }
+
+    .footer-superior {
+        grid-template-columns:repeat(2,1fr);
+        gap:32px 22px;
+    }
+}
+
+@media(max-width:480px) {
+    .logo {
+        font-size:30px;
+    }
+
+    .contenido p {
+        font-size:15px;
+        text-align:left;
+    }
+
+    .contenido li {
+        font-size:14px;
+    }
+
+    .fuentes {
+        padding:25px 21px;
+    }
+
+    .footer-superior {
+        grid-template-columns:1fr 1fr;
+        gap:28px 18px;
+    }
+
+    .footer-identidad {
+        grid-column:1 / -1;
+        max-width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="contenedor cabecera">
+
+<a href="index.html" class="logo">VECIA<span>.</span></a>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="quienes-somos.html">Quiénes somos</a>
+<a href="servicios.html">Servicios</a>
+<a href="articulos.html" class="activo">Artículos</a>
+<a href="index.html#contacto">Contacto</a>
+</nav>
+
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="contenedor">
+
+<p class="etiqueta">VECIA Juristas · Derecho de familia</p>
+
+<h1>
+El régimen jurídico del reconocimiento de las
+<span>adopciones internacionales (I)</span>
+</h1>
+
+<p class="descripcion">
+Una aproximación al sistema español de reconocimiento de las adopciones
+constituidas en el extranjero y a los instrumentos jurídicos que garantizan
+la protección de los menores.
+</p>
+
+<div class="datos-articulo">
+Análisis jurídico · Primera entrega
+</div>
+
+</div>
+</section>
+
+<article class="articulo-contenedor">
+
+<div class="cita">
+<blockquote>
+«La adopción no se trata de encontrar niños para las familias,
+sino de encontrar familias para los niños.»
+</blockquote>
+<p>— Joyce Maguire Pavao</p>
+</div>
+
+<div class="contenido">
+
+<h2>Introducción</h2>
+
+<p>
+Esta conocida reflexión resume con precisión el cambio de paradigma que ha transformado el Derecho de familia en las últimas décadas. Detrás del proyecto vital de adoptar existe un complejo engranaje jurídico diseñado para garantizar que el traslado de un menor de un país a otro se realice con todas las garantías éticas y legales. Lejos de constituir un mero trámite administrativo o una vía para satisfacer el deseo de ser padres, el ordenamiento jurídico moderno concibe la adopción internacional como una medida de protección de la infancia, en la que el menor deja de ser un sujeto pasivo para convertirse en verdadero titular de derechos.
+</p>
+
+<p>
+En nuestro sistema jurídico, la Ley 54/2007, de 28 de diciembre, de Adopción Internacional (LAI), define esta figura como aquella en la que un menor, considerado adoptable por la autoridad extranjera competente y con residencia habitual en el extranjero, es o va a ser desplazado a España por personas adoptantes con residencia habitual en nuestro país, bien después de haberse constituido la adopción en el Estado de origen, bien con la finalidad de constituirla en España.
+</p>
+
+<p>
+Para que este proceso se desarrolle sin poner en riesgo los derechos del menor, el sistema se articula en torno a varios principios esenciales que orientan tanto la constitución de la adopción como su posterior reconocimiento:
+</p>
+
+<ul>
+<li>
+<strong>El interés superior del menor:</strong>
+constituye el eje vertebrador de todo el sistema. Reconocido expresamente en la Convención sobre los Derechos del Niño de 1989 y proyectado en nuestro ordenamiento, entre otros, a través del artículo 39 de la Constitución y de la propia Ley de Adopción Internacional, exige que cualquier decisión anteponga el bienestar y los derechos del niño a los demás intereses legítimos que puedan concurrir.
+</li>
+
+<li>
+<strong>El principio de subsidiariedad:</strong>
+la adopción internacional no debe entenderse como una primera alternativa, sino como una medida de protección que requiere valorar previamente las posibilidades de permanencia del menor en su entorno familiar y de encontrar una solución familiar adecuada en su propio Estado. El Convenio de La Haya de 1993 exige que las autoridades del país de origen examinen estas posibilidades antes de considerar que la adopción internacional responde al interés superior del niño.
+</li>
+
+<li>
+<strong>La cooperación entre Estados:</strong>
+las autoridades del país de origen y del país de recepción deben actuar de forma coordinada, intercambiando información y comprobando el cumplimiento de las garantías exigidas. Esta cooperación resulta esencial para prevenir irregularidades, beneficios económicos indebidos y prácticas de sustracción, venta o tráfico de menores.
+</li>
+</ul>
+
+<p>
+Ahora bien, uno de los momentos más delicados desde el punto de vista jurídico llega cuando una adopción constituida en el extranjero necesita ser reconocida en España para desplegar aquí sus efectos. Las diferencias entre los ordenamientos jurídicos nacionales hacen necesario contar con un sistema de reconocimiento que permita comprobar la regularidad de la adopción y garantizar la protección del menor.
+</p>
+
+<p>
+En este ámbito, el Derecho español establece un régimen basado, en primer lugar, en la aplicación preferente de los instrumentos internacionales vigentes y, en su defecto, en las normas internas de la Ley de Adopción Internacional. Podemos distinguir tres grandes referencias normativas:
+</p>
+
+<ul>
+<li>
+<strong>El Convenio de La Haya de 1993:</strong>
+constituye el principal instrumento internacional de cooperación en materia de adopción. Cuando resulta aplicable y la adopción ha sido certificada como conforme al Convenio por la autoridad competente del Estado en que se constituyó, su reconocimiento en los demás Estados contratantes se produce de pleno derecho. La posibilidad de denegarlo queda limitada a los supuestos excepcionales previstos en el propio instrumento, especialmente cuando resulte manifiestamente contrario al orden público, teniendo en cuenta el interés superior del niño.
+</li>
+
+<li>
+<strong>Los convenios bilaterales:</strong>
+España mantiene determinados instrumentos internacionales con otros Estados que pueden incidir en el reconocimiento de resoluciones extranjeras en materia de adopción. Su aplicación exige atender al contenido concreto de cada convenio, a su ámbito material y a su vigencia. No todos regulan específicamente la adopción, por lo que su interpretación puede plantear cuestiones particulares.
+</li>
+
+<li>
+<strong>La legislación interna (LAI):</strong>
+cuando no exista un instrumento internacional aplicable, entran en juego las disposiciones de la Ley 54/2007. En particular, sus artículos 25 a 27 establecen el marco para reconocer en España las adopciones constituidas por autoridades extranjeras. Entre otras cuestiones, exigen comprobar la competencia de la autoridad que constituyó la adopción y que esta no vulnere el orden público internacional español.
+</li>
+</ul>
+
+<p>
+Este último ámbito permite abordar una cuestión especialmente relevante: ¿qué ocurre cuando el ordenamiento extranjero contempla una <strong>adopción simple o menos plena</strong>, cuyos efectos no coinciden con los de la adopción regulada en España? La Ley de Adopción Internacional contempla expresamente esta posibilidad. Su artículo 30 regula los efectos en España de estas adopciones y prevé que puedan transformarse en una adopción plena conforme al Derecho español, siempre que se cumplan los requisitos legales y se respeten los consentimientos y garantías exigidos.
+</p>
+
+<p>
+Conviene distinguir estas situaciones de otras instituciones de protección de menores, como la <strong><em>kafala</em> islámica</strong>. Esta figura no constituye propiamente una adopción, puesto que no genera un vínculo de filiación entre el menor y la persona o familia que asume su cuidado. Por ello, su tratamiento jurídico en España responde a un régimen distinto, previsto para las medidas extranjeras de protección que no producen vínculos de filiación.
+</p>
+
+<p>
+A lo largo de este artículo analizaremos cómo funciona este marco jurídico en España: qué autoridades intervienen, cómo opera el reconocimiento conforme al Convenio de La Haya y a los instrumentos bilaterales, y qué soluciones ofrece nuestra legislación cuando la adopción procede de Estados con los que no existe un marco internacional específico aplicable.
+</p>
+
+</div>
+
+<div class="separador"></div>
+
+<section class="fuentes">
+
+<p class="etiqueta">Documentación jurídica</p>
+
+<h2>Legislación y fuentes normativas</h2>
+
+<p class="fuentes-intro">
+Para profundizar en el régimen jurídico del reconocimiento de las adopciones
+internacionales, pueden consultarse los siguientes textos normativos
+en sus fuentes oficiales:
+</p>
+
+<ol class="lista-fuentes">
+
+<li>
+<strong>1. Constitución Española, de 1978.</strong>
+<p>
+Especialmente, su artículo 39, relativo a la protección de la familia y de los menores.
+</p>
+<a href="https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229"
+target="_blank" rel="noopener noreferrer">
+Consultar en el BOE →
+</a>
+</li>
+
+<li>
+<strong>2. Convención sobre los Derechos del Niño, de 20 de noviembre de 1989.</strong>
+<p>
+En particular, su artículo 3, que establece el interés superior del niño como consideración primordial.
+</p>
+<a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1990-31312"
+target="_blank" rel="noopener noreferrer">
+Consultar en el BOE →
+</a>
+</li>
+
+<li>
+<strong>3. Convenio relativo a la protección del niño y a la cooperación en materia de adopción internacional, hecho en La Haya el 29 de mayo de 1993.</strong>
+<p>
+Instrumento fundamental para la cooperación entre Estados y el reconocimiento de las adopciones internacionales.
+</p>
+<a href="https://www.hcch.net/en/instruments/conventions/full-text/?cid=69"
+target="_blank" rel="noopener noreferrer">
+Consultar el texto oficial en la Conferencia de La Haya →
+</a>
+<br><br>
+<a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1995-18485"
+target="_blank" rel="noopener noreferrer">
+Consultar su publicación en el BOE →
+</a>
+</li>
+
+<li>
+<strong>4. Ley 54/2007, de 28 de diciembre, de Adopción Internacional.</strong>
+<p>
+Norma central del ordenamiento español en esta materia. Especialmente, sus artículos 25 a 31, relativos a los efectos en España de las adopciones constituidas por autoridades extranjeras.
+</p>
+<a href="https://www.boe.es/eli/es/l/2007/12/28/54/con"
+target="_blank" rel="noopener noreferrer">
+Consultar el texto consolidado en el BOE →
+</a>
+</li>
+
+<li>
+<strong>5. Real Decreto 573/2023, de 4 de julio, por el que se aprueba el Reglamento de Adopción Internacional.</strong>
+<p>
+Desarrolla reglamentariamente determinados aspectos de la tramitación de las adopciones internacionales.
+</p>
+<a href="https://www.boe.es/eli/es/rd/2023/07/04/573/con"
+target="_blank" rel="noopener noreferrer">
+Consultar el texto consolidado en el BOE →
+</a>
+</li>
+
+</ol>
+
+<p class="nota-fuentes">
+Los enlaces remiten a fuentes institucionales. Los textos consolidados del BOE
+tienen carácter informativo; para fines jurídicos debe atenderse también a la
+publicación oficial de las normas y a sus posibles modificaciones.
+</p>
+
+</section>
+
+<div class="navegacion-articulo">
+<a href="articulos.html" class="volver">
+← Volver a artículos y legislación
+</a>
+
+<a href="index.html" class="volver">
+Volver al inicio →
+</a>
+</div>
+
+</article>
+
+</main>
+
+<footer class="footer-vecia">
+<div class="contenedor">
+
+<div class="footer-superior">
+
+<div class="footer-identidad">
+<div class="footer-logo">VECIA JURISTAS</div>
+<p class="lema">
+Asesoramiento, consultoría y mucho + Derecho
+</p>
+</div>
+
+<div class="footer-columna">
+<h3>Legal</h3>
+<a href="aviso-legal.html">Aviso legal</a>
+<a href="politica-privacidad.html">Política de privacidad</a>
+<a href="politica-cookies.html">Política de cookies</a>
+<button type="button" onclick="window.VECIAConsent && window.VECIAConsent.openSettings()">
+Configurar cookies
+</button>
+</div>
+
+<div class="footer-columna">
+<h3>Redes</h3>
+<div class="redes-iconos">
+<a href="https://www.instagram.com/vecia_juancgv/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+<img src="https://cdn.simpleicons.org/instagram/e9e2d3" alt="Instagram">
+</a>
+<a href="https://x.com/Vecia_juristas" target="_blank" rel="noopener noreferrer" aria-label="X">
+<img src="https://cdn.simpleicons.org/x/e9e2d3" alt="X">
+</a>
+<a href="https://www.tiktok.com/@vecia.juristas" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+<img src="https://cdn.simpleicons.org/tiktok/e9e2d3" alt="TikTok">
+</a>
+<a href="https://www.linkedin.com/in/juan-carlos-garcía-vega-58001a359/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+<img src="https://api.iconify.design/mdi/linkedin.svg?color=%23e9e2d3" alt="LinkedIn">
+</a>
+</div>
+</div>
+
+<div class="footer-columna">
+<h3>Contacto</h3>
+<a href="mailto:juancgv36@gmail.com">juancgv36@gmail.com</a>
+<a href="tel:+34634260689">634 260 689</a>
+<a href="https://wa.me/34634260689" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+</div>
+
+</div>
+
+<div class="footer-inferior">
+<p>© 2026 VECIA Juristas. Todos los derechos reservados.</p>
+</div>
+
+</div>
+</footer>
+
+</body>
+</html>
+
