@@ -357,14 +357,21 @@ nav a:hover {
 
 .contacto-contenido {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .8fr 1.2fr;
     gap: 60px;
-    align-items: center;
+    align-items: start;
 }
 
 .contacto-texto {
     color: #64645d;
     margin-top: 20px;
+}
+
+.contacto-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-width: 0;
 }
 
 .datos-contacto {
@@ -409,6 +416,121 @@ nav a:hover {
 
 .boton-whatsapp:hover {
     background: #854b56;
+}
+
+/* FORMULARIO DE CONTACTO */
+
+.formulario-contacto {
+    background: var(--crema);
+    color: var(--tinta);
+    padding: 32px;
+    border: 1px solid var(--dorado);
+    width: 100%;
+}
+
+.formulario-contacto h3 {
+    color: var(--verde);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.formulario-contacto > p {
+    color: #62645e;
+    margin-bottom: 25px;
+    font-size: .95rem;
+}
+
+.campo-formulario {
+    margin-bottom: 19px;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--tinta);
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.campo-formulario input:not([type="checkbox"]),
+.campo-formulario select,
+.campo-formulario textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #c9c1b2;
+    background: #fffdf8;
+    color: var(--tinta);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+.campo-formulario textarea {
+    min-height: 135px;
+    resize: vertical;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    outline: 2px solid var(--dorado);
+    outline-offset: 2px;
+}
+
+.privacidad-formulario {
+    margin-top: 23px;
+}
+
+.privacidad-formulario label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: .85rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.privacidad-formulario input {
+    flex: 0 0 auto;
+    width: 17px;
+    height: 17px;
+    margin-top: 3px;
+    accent-color: var(--verde);
+}
+
+.privacidad-formulario a {
+    color: var(--burdeos);
+    text-decoration: underline;
+}
+
+.boton-formulario {
+    display: inline-block;
+    width: auto;
+    padding: 14px 26px;
+    background: var(--verde);
+    color: var(--crema);
+    border: 1px solid var(--dorado);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.boton-formulario:hover {
+    background: var(--verde-claro);
+}
+
+.aviso-formulario {
+    margin-top: 17px;
+    color: #68675f;
+    font-size: .8rem;
+    line-height: 1.5;
 }
 
 /* PIE DE PÁGINA */
@@ -616,6 +738,14 @@ nav a:hover {
 
     .datos-contacto {
         padding: 25px;
+    }
+
+    .formulario-contacto {
+        padding: 23px;
+    }
+
+    .boton-formulario {
+        width: 100%;
     }
 
     .footer-columna {
@@ -897,29 +1027,148 @@ nav a:hover {
 
             <p class="contacto-texto">
                 Para consultas e información, puedes ponerte en contacto
-                a través del teléfono o del correo electrónico.
+                a través del teléfono, del correo electrónico o mediante
+                el siguiente formulario.
             </p>
         </div>
 
-        <div class="datos-contacto">
+        <div class="contacto-panel">
 
-            <div class="dato">
-                <small>Teléfono</small>
-                <a href="tel:+34634260689">634 260 689</a>
+            <div class="datos-contacto">
+
+                <div class="dato">
+                    <small>Teléfono</small>
+                    <a href="tel:+34634260689">634 260 689</a>
+                </div>
+
+                <div class="dato">
+                    <small>Correo electrónico</small>
+                    <a href="mailto:juancgv36@gmail.com">juancgv36@gmail.com</a>
+                </div>
+
+                <a
+                    class="boton-whatsapp"
+                    href="https://wa.me/34634260689"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Contactar por WhatsApp
+                </a>
+
             </div>
 
-            <div class="dato">
-                <small>Correo electrónico</small>
-                <a href="mailto:juancgv36@gmail.com">juancgv36@gmail.com</a>
-            </div>
+            <!-- FORMULARIO -->
 
-            <a
-                class="boton-whatsapp"
-                href="https://wa.me/34634260689"
-                target="_blank"
-                rel="noopener noreferrer">
-                Contactar por WhatsApp
-            </a>
+            <div class="formulario-contacto">
+
+                <h3>Envíanos un mensaje.</h3>
+
+                <p>
+                    Cuéntanos brevemente qué necesitas y nos pondremos
+                    en contacto contigo.
+                </p>
+
+                <form
+                    action="https://formsubmit.co/juancgv36@gmail.com"
+                    method="POST">
+
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="Nueva consulta desde VECIA Juristas">
+
+                    <input
+                        type="hidden"
+                        name="_template"
+                        value="table">
+
+                    <div class="campo-formulario">
+                        <label for="nombre">Nombre y apellidos</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="email">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            autocomplete="tel">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="motivo">Motivo del contacto</label>
+
+                        <select id="motivo" name="motivo" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="Asesoramiento jurídico">
+                                Asesoramiento jurídico
+                            </option>
+                            <option value="Consultoría">
+                                Consultoría
+                            </option>
+                            <option value="Colaboraciones profesionales">
+                                Colaboraciones profesionales
+                            </option>
+                            <option value="Otros asuntos">
+                                Otros asuntos
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="5"
+                            required></textarea>
+                    </div>
+
+                    <div class="campo-formulario privacidad-formulario">
+                        <label for="privacidad">
+                            <input
+                                type="checkbox"
+                                id="privacidad"
+                                name="privacidad"
+                                value="He leído la información de protección de datos"
+                                required>
+
+                            <span>
+                                He leído la información sobre protección
+                                de datos de la
+                                <a href="politica-privacidad.html">
+                                    Política de privacidad
+                                </a>.
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="boton-formulario">
+                        Enviar mensaje
+                    </button>
+
+                    <p class="aviso-formulario">
+                        Por favor, no incluyas en este formulario datos
+                        especialmente sensibles ni documentación confidencial.
+                    </p>
+
+                </form>
+            </div>
 
         </div>
     </div>
