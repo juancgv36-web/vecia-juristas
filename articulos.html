@@ -189,20 +189,29 @@ header {
     background: rgba(244,240,230,0.45);
     display: flex;
     align-items: center;
+    color: var(--verde);
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    line-height: 1.3;
     transition: 0.25s;
 }
 
-.categoria:hover {
+/* Solo las categorías que tienen enlace son pulsables */
+
+a.categoria {
+    cursor: pointer;
+}
+
+a.categoria:hover {
     background: var(--verde);
     color: var(--crema);
     border-color: var(--verde);
     transform: translateY(-3px);
 }
 
-.categoria span {
-    font-family: 'Playfair Display', serif;
-    font-size: 19px;
-    line-height: 1.3;
+a.categoria:focus-visible {
+    outline: 3px solid var(--burdeos);
+    outline-offset: 4px;
 }
 
 /* ARTÍCULOS */
@@ -465,39 +474,41 @@ footer a:hover {
         <div class="categorias-lista">
 
             <div class="categoria">
-                <span>Derecho administrativo</span>
+                Derecho administrativo
             </div>
 
             <div class="categoria">
-                <span>Derecho penal</span>
+                Derecho penal
+            </div>
+
+            <a class="categoria"
+               href="reconocimiento-adopciones-internacionales-I.html">
+                Derecho civil
+            </a>
+
+            <div class="categoria">
+                Derecho mercantil
             </div>
 
             <div class="categoria">
-                <span>Derecho civil</span>
+                Derecho laboral
             </div>
 
             <div class="categoria">
-                <span>Derecho mercantil</span>
+                Derecho constitucional
             </div>
 
             <div class="categoria">
-                <span>Derecho laboral</span>
+                Derecho internacional
             </div>
 
-            <div class="categoria">
-                <span>Derecho constitucional</span>
-            </div>
+            <a class="categoria"
+               href="reconocimiento-adopciones-internacionales-I.html">
+                Derecho de familia
+            </a>
 
             <div class="categoria">
-                <span>Derecho internacional</span>
-            </div>
-
-            <div class="categoria">
-                <span>Derecho de familia</span>
-            </div>
-
-            <div class="categoria">
-                <span>Derecho tributario</span>
+                Derecho tributario
             </div>
 
         </div>
