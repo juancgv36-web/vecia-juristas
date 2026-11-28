@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artículos, comentarios de legislación y análisis jurídico de VECIA Juristas.">
+<meta name="description" content="Artículos de Derecho administrativo, penal, civil, mercantil, laboral, constitucional, internacional y de familia de VECIA Juristas.">
 <title>Artículos y legislación | VECIA Juristas</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -152,26 +152,39 @@ h2 {
     color:#55574f;
 }
 
+/* MATERIAS DE INTERÉS */
+
 .categorias {
     background:var(--papel);
-    padding:35px 0;
+    padding:45px 0;
 }
 
 .categorias-lista {
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
 }
 
 .categoria {
-    display:inline-block;
-    border:1px solid rgba(113,60,70,.45);
-    padding:9px 16px;
+    display:flex;
+    align-items:center;
+    min-height:58px;
+    padding:13px 17px;
+    border:1px solid rgba(113,60,70,.35);
     color:var(--burdeos);
     font-size:11px;
     letter-spacing:1px;
     text-transform:uppercase;
+    transition:background .2s ease, color .2s ease, border-color .2s ease;
 }
+
+.categoria:hover {
+    background:var(--verde);
+    color:var(--crema);
+    border-color:var(--verde);
+}
+
+/* PUBLICACIONES */
 
 .publicaciones {
     padding:85px 0;
@@ -296,6 +309,8 @@ h2 {
     padding-bottom:4px;
 }
 
+/* PIE DE PÁGINA */
+
 .footer-vecia {
     background:#183b32;
     color:#f4f0e6;
@@ -394,6 +409,8 @@ h2 {
     opacity:.7;
 }
 
+/* TABLET */
+
 @media(max-width:800px) {
     .cabecera {
         padding:22px 0;
@@ -414,6 +431,10 @@ h2 {
         gap:25px;
     }
 
+    .categorias-lista {
+        grid-template-columns:repeat(2,1fr);
+    }
+
     .seccion {
         padding:65px 0;
     }
@@ -424,9 +445,15 @@ h2 {
     }
 }
 
+/* MÓVIL */
+
 @media(max-width:480px) {
     .logo {
         font-size:30px;
+    }
+
+    .categorias-lista {
+        grid-template-columns:1fr;
     }
 
     .articulo {
@@ -499,7 +526,7 @@ comprender sus implicaciones y pensar el Derecho.
 <div class="texto">
 <p>
 Este espacio reúne publicaciones dedicadas al estudio
-y análisis del Derecho, la actualidad legislativa
+y análisis del Derecho, sus distintas disciplinas
 y las cuestiones jurídicas de interés.
 </p>
 
@@ -520,12 +547,23 @@ desde una perspectiva rigurosa y accesible.
 </p>
 
 <div class="categorias-lista">
-<span class="categoria">Derecho civil</span>
-<span class="categoria">Derecho penal</span>
-<span class="categoria">Derecho administrativo</span>
-<span class="categoria">Legislación</span>
-<span class="categoria">Análisis jurídico</span>
-<span class="categoria">Actualidad</span>
+
+<div class="categoria">Derecho administrativo</div>
+
+<div class="categoria">Derecho penal</div>
+
+<div class="categoria">Derecho civil</div>
+
+<div class="categoria">Derecho mercantil</div>
+
+<div class="categoria">Derecho laboral</div>
+
+<div class="categoria">Derecho constitucional</div>
+
+<div class="categoria">Derecho internacional</div>
+
+<div class="categoria">Derecho de familia</div>
+
 </div>
 
 </div>
@@ -542,14 +580,17 @@ desde una perspectiva rigurosa y accesible.
 <h2>Artículos y comentarios.</h2>
 
 <p class="texto">
-Análisis jurídicos, legislación y reflexiones sobre el Derecho.
+Publicaciones organizadas por materias jurídicas.
 </p>
 </div>
 
 <div class="publicaciones-grid">
 
 <article class="articulo">
-<span class="categoria-texto">Derecho de familia · Adopción internacional</span>
+
+<span class="categoria-texto">
+Derecho civil · Adopción internacional
+</span>
 
 <h3>El régimen jurídico del reconocimiento de las adopciones internacionales (I)</h3>
 
@@ -564,13 +605,14 @@ los instrumentos internacionales y la Ley de Adopción Internacional.
 <a class="leer-articulo" href="reconocimiento-adopciones-internacionales-I.html">
 Leer artículo →
 </a>
+
 </article>
 
 </div>
 
 <div class="nota-editorial">
 Esta biblioteca se ampliará progresivamente con nuevos artículos,
-comentarios legislativos y análisis jurídicos.
+comentarios y estudios especializados en las distintas materias del Derecho.
 </div>
 
 </div>
