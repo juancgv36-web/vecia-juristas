@@ -3,471 +3,401 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Artículos de Derecho administrativo, penal, civil, mercantil, laboral, constitucional, internacional y de familia de VECIA Juristas.">
-<title>Artículos y legislación | VECIA Juristas</title>
+
+<meta name="description" content="Artículos de VECIA Juristas sobre Derecho administrativo, penal, civil, mercantil, laboral, constitucional, internacional, de familia y tributario.">
+
+<title>Artículos | VECIA Juristas</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="cookies.css">
-<script src="cookies.js" defer></script>
 
 <style>
 :root {
-    --verde:#183b32;
-    --verde-claro:#294d42;
-    --crema:#f4f0e6;
-    --papel:#e9e2d3;
-    --burdeos:#713c46;
-    --dorado:#b49a67;
-    --tinta:#252b27;
+    --verde: #183b32;
+    --verde-claro: #294d42;
+    --verde-profundo: #122c25;
+    --crema: #f4f0e6;
+    --papel: #e9e2d3;
+    --burdeos: #713c46;
+    --dorado: #b49a67;
+    --tinta: #252b27;
+    --gris: #77786f;
 }
 
 * {
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-    background:var(--crema);
-    color:var(--tinta);
-    font-family:'DM Sans',sans-serif;
-    line-height:1.7;
+    background: var(--crema);
+    color: var(--tinta);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
 }
 
 a {
-    color:inherit;
-    text-decoration:none;
+    color: inherit;
+    text-decoration: none;
 }
 
 .contenedor {
-    width:min(1160px,90%);
-    margin:auto;
+    width: min(1120px, 90%);
+    margin: auto;
 }
+
+/* CABECERA */
 
 header {
-    background:var(--verde);
-    color:var(--crema);
-    border-bottom:1px solid rgba(180,154,103,.45);
+    background: var(--verde-profundo);
+    color: var(--crema);
+    padding: 22px 0;
 }
 
-.cabecera {
-    min-height:100px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:25px;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
 }
 
 .logo {
-    font-family:'Playfair Display',serif;
-    font-size:35px;
-    letter-spacing:5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: var(--crema);
 }
 
 .logo span {
-    color:var(--dorado);
+    color: var(--dorado);
 }
 
-nav {
-    display:flex;
-    flex-wrap:wrap;
-    gap:22px;
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
 }
 
-nav a {
-    font-size:11px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    color:#e8e2d7;
+.menu a {
+    color: var(--crema);
+    opacity: 0.8;
+    transition: 0.2s;
 }
 
-nav a:hover,
-nav a.activo {
-    color:var(--dorado);
+.menu a:hover,
+.menu a.activo {
+    color: var(--dorado);
+    opacity: 1;
 }
 
-.hero {
-    background:var(--verde);
-    color:var(--crema);
-    padding:80px 0 90px;
+/* PORTADA */
+
+.portada {
+    background: var(--verde);
+    color: var(--crema);
+    padding: 105px 0 100px;
 }
 
-.etiqueta {
-    color:var(--dorado);
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:11px;
-    font-weight:700;
-    margin-bottom:22px;
+.sobretitulo {
+    color: var(--dorado);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    margin-bottom: 22px;
 }
 
-h1,h2,h3 {
-    font-family:'Playfair Display',serif;
-    font-weight:500;
+.portada h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 1.12;
+    max-width: 800px;
+    font-weight: 500;
+    margin-bottom: 25px;
 }
 
-.hero h1 {
-    font-size:clamp(42px,6vw,68px);
-    line-height:1.13;
-    max-width:850px;
+.portada p {
+    max-width: 620px;
+    color: rgba(244,240,230,0.78);
+    font-size: 16px;
 }
 
-.hero h1 span {
-    color:var(--dorado);
-    font-style:italic;
+/* INTRODUCCIÓN */
+
+.introduccion {
+    padding: 85px 0 75px;
 }
 
-.hero .descripcion {
-    max-width:680px;
-    color:#dedbd0;
-    margin-top:25px;
-    font-size:16px;
+.numero {
+    color: var(--burdeos);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
 }
 
-.seccion {
-    padding:80px 0;
+.introduccion h2,
+.materias h2,
+.biblioteca h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--verde);
+    margin-bottom: 22px;
 }
 
-.intro {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:65px;
-    align-items:start;
+.introduccion p {
+    max-width: 760px;
+    color: #555950;
+    font-size: 15px;
 }
 
-h2 {
-    font-size:clamp(34px,4vw,47px);
-    line-height:1.2;
-    color:var(--verde);
-    margin-bottom:24px;
+/* MATERIAS */
+
+.materias {
+    background: var(--papel);
+    padding: 85px 0;
 }
 
-.texto {
-    color:#55574f;
-}
-
-/* MATERIAS DE INTERÉS */
-
-.categorias {
-    background:var(--papel);
-    padding:45px 0;
+.materias-intro {
+    max-width: 700px;
+    color: #62645b;
+    font-size: 14px;
+    margin-bottom: 38px;
 }
 
 .categorias-lista {
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
 }
 
 .categoria {
-    display:flex;
-    align-items:center;
-    min-height:58px;
-    padding:13px 17px;
-    border:1px solid rgba(113,60,70,.35);
-    color:var(--burdeos);
-    font-size:11px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    transition:background .2s ease, color .2s ease, border-color .2s ease;
+    min-height: 105px;
+    padding: 25px 22px;
+    border: 1px solid rgba(24,59,50,0.22);
+    background: rgba(244,240,230,0.45);
+    display: flex;
+    align-items: center;
+    transition: 0.25s;
 }
 
 .categoria:hover {
-    background:var(--verde);
-    color:var(--crema);
-    border-color:var(--verde);
+    background: var(--verde);
+    color: var(--crema);
+    border-color: var(--verde);
+    transform: translateY(-3px);
 }
 
-/* PUBLICACIONES */
-
-.publicaciones {
-    padding:85px 0;
+.categoria span {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    line-height: 1.3;
 }
 
-.publicaciones-cabecera {
-    margin-bottom:40px;
+/* ARTÍCULOS */
+
+.biblioteca {
+    padding: 90px 0 105px;
 }
 
-.publicaciones-grid {
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
+.biblioteca-intro {
+    color: #62645b;
+    font-size: 14px;
+    max-width: 680px;
+    margin-bottom: 38px;
 }
 
 .articulo {
-    background:#ebe6da;
-    padding:36px;
-    border-top:3px solid var(--burdeos);
-    display:flex;
-    flex-direction:column;
-    min-height:300px;
-    grid-column:1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 35px;
+    padding: 35px 0;
+    border-top: 1px solid rgba(24,59,50,0.25);
+    border-bottom: 1px solid rgba(24,59,50,0.25);
 }
 
-.articulo .categoria-texto {
-    color:var(--burdeos);
-    font-size:10px;
-    font-weight:700;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:15px;
+.articulo-imagen {
+    min-height: 220px;
+    background: var(--verde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dorado);
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 25px;
+}
+
+.articulo-categoria {
+    color: var(--burdeos);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    margin-bottom: 15px;
 }
 
 .articulo h3 {
-    color:var(--verde);
-    font-size:clamp(25px,3vw,34px);
-    line-height:1.3;
-    margin-bottom:17px;
-    max-width:850px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.25;
+    color: var(--verde);
+    font-weight: 500;
+    margin-bottom: 17px;
 }
 
 .articulo p {
-    color:#64645d;
-    font-size:15px;
-    max-width:850px;
+    color: #5e6058;
+    font-size: 14px;
+    margin-bottom: 22px;
 }
 
-.articulo .meta {
-    margin-top:auto;
-    padding-top:25px;
-    color:#858176;
-    font-size:11px;
+.leer {
+    display: inline-block;
+    color: var(--burdeos);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--burdeos);
+    padding-bottom: 4px;
+    transition: 0.2s;
 }
 
-.leer-articulo {
-    display:inline-block;
-    align-self:flex-start;
-    margin-top:22px;
-    padding:12px 20px;
-    background:var(--verde);
-    color:var(--crema);
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    transition:background .2s ease;
+.leer:hover {
+    color: var(--verde);
+    border-color: var(--verde);
 }
 
-.leer-articulo:hover {
-    background:var(--burdeos);
+/* PIE */
+
+footer {
+    background: var(--verde-profundo);
+    color: var(--crema);
+    padding: 55px 0 25px;
 }
 
-.nota-editorial {
-    margin-top:28px;
-    padding:25px 28px;
-    border-left:3px solid var(--dorado);
-    background:rgba(233,226,211,.55);
-    color:#64645d;
-    font-size:14px;
-}
-
-.invitacion {
-    background:var(--verde);
-    color:var(--crema);
-    padding:65px 0;
-    text-align:center;
-}
-
-.invitacion h2 {
-    color:var(--crema);
-}
-
-.invitacion p {
-    max-width:650px;
-    margin:auto;
-    color:#dedbd0;
-}
-
-.boton {
-    display:inline-block;
-    margin-top:28px;
-    padding:14px 25px;
-    background:var(--dorado);
-    color:var(--verde);
-    text-transform:uppercase;
-    letter-spacing:1px;
-    font-size:11px;
-    font-weight:700;
-}
-
-.boton:hover {
-    background:var(--crema);
-}
-
-.volver {
-    display:inline-block;
-    margin-top:30px;
-    color:var(--burdeos);
-    font-weight:700;
-    border-bottom:1px solid var(--dorado);
-    padding-bottom:4px;
-}
-
-/* PIE DE PÁGINA */
-
-.footer-vecia {
-    background:#183b32;
-    color:#f4f0e6;
-    padding:48px 0 20px;
-    text-align:left;
-}
-
-.footer-superior {
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr 1.2fr;
-    gap:35px;
-    padding-bottom:35px;
-}
-
-.footer-identidad {
-    max-width:280px;
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 45px;
+    padding-bottom: 40px;
 }
 
 .footer-logo {
-    font-family:'Playfair Display',serif;
-    color:#f4f0e6;
-    letter-spacing:2px;
-    font-size:1.15rem;
-    margin-bottom:10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-.lema {
-    color:#d8cbb3;
-    font-size:.88rem;
-    line-height:1.7;
+.footer-logo span {
+    color: var(--dorado);
 }
 
-.footer-columna {
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:12px;
+footer h4 {
+    color: var(--dorado);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-.footer-columna h3 {
-    color:#b49a67;
-    font-size:1.05rem;
-    margin-bottom:5px;
+footer p,
+footer a {
+    color: rgba(244,240,230,0.75);
+    font-size: 12px;
 }
 
-.footer-columna a,
-.footer-columna button {
-    color:#e9e2d3;
-    font-family:inherit;
-    font-size:.84rem;
-    background:none;
-    border:none;
-    padding:0;
-    cursor:pointer;
-    text-align:left;
+.footer-enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.footer-columna a:hover,
-.footer-columna button:hover {
-    color:#b49a67;
+footer a:hover {
+    color: var(--dorado);
 }
 
-.footer-inferior {
-    border-top:1px solid rgba(180,154,103,.3);
-    padding-top:20px;
-    text-align:center;
+.footer-final {
+    border-top: 1px solid rgba(244,240,230,0.16);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 11px;
+    color: rgba(244,240,230,0.55);
 }
 
-.footer-inferior p {
-    font-size:12px;
-    color:#bdb9ad;
-}
+/* RESPONSIVE */
 
-.redes-iconos {
-    display:flex;
-    align-items:center;
-    gap:17px;
-}
-
-.redes-iconos a {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:25px;
-    height:25px;
-}
-
-.redes-iconos img {
-    width:21px;
-    height:21px;
-    transition:transform .2s ease,opacity .2s ease;
-}
-
-.redes-iconos a:hover img {
-    transform:translateY(-3px);
-    opacity:.7;
-}
-
-/* TABLET */
-
-@media(max-width:800px) {
-    .cabecera {
-        padding:22px 0;
-        flex-direction:column;
+@media (max-width: 850px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    nav {
-        justify-content:center;
-        gap:13px 17px;
-    }
-
-    nav a {
-        font-size:10px;
-    }
-
-    .intro {
-        grid-template-columns:1fr;
-        gap:25px;
+    .menu {
+        gap: 16px;
     }
 
     .categorias-lista {
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .seccion {
-        padding:65px 0;
-    }
-
-    .footer-superior {
-        grid-template-columns:repeat(2,1fr);
-        gap:32px 22px;
+    .footer-contenido {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-/* MÓVIL */
+@media (max-width: 600px) {
+    .portada {
+        padding: 75px 0;
+    }
 
-@media(max-width:480px) {
-    .logo {
-        font-size:30px;
+    .introduccion,
+    .materias,
+    .biblioteca {
+        padding: 65px 0;
     }
 
     .categorias-lista {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .categoria {
+        min-height: 78px;
     }
 
     .articulo {
-        padding:25px;
+        grid-template-columns: 1fr;
+        gap: 22px;
     }
 
-    .footer-superior {
-        grid-template-columns:1fr 1fr;
-        gap:28px 18px;
+    .articulo-imagen {
+        min-height: 170px;
     }
 
-    .footer-identidad {
-        grid-column:1 / -1;
-        max-width:100%;
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .menu {
+        gap: 12px;
+        font-size: 12px;
     }
 }
 </style>
@@ -476,234 +406,207 @@ h2 {
 <body>
 
 <header>
-<div class="contenedor cabecera">
+    <div class="contenedor nav">
+        <a href="index.html" class="logo">VECIA<span>.</span></a>
 
-<a href="index.html" class="logo">VECIA<span>.</span></a>
-
-<nav>
-<a href="index.html">Inicio</a>
-<a href="quienes-somos.html">Quiénes somos</a>
-<a href="servicios.html">Servicios</a>
-<a href="articulos.html" class="activo">Artículos</a>
-<a href="index.html#contacto">Contacto</a>
-</nav>
-
-</div>
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="quienes-somos.html">Quiénes somos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="articulos.html" class="activo">Artículos</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
+    </div>
 </header>
 
 <main>
 
-<section class="hero">
-<div class="contenedor">
+<section class="portada">
+    <div class="contenedor">
+        <div class="sobretitulo">VECIA Juristas · Publicaciones</div>
 
-<p class="etiqueta">VECIA Juristas · Publicaciones</p>
+        <h1>El Derecho también se escribe y se piensa.</h1>
 
-<h1>
-El Derecho también se
-<span>escribe y se piensa.</span>
-</h1>
-
-<p class="descripcion">
-Artículos, comentarios de legislación y reflexiones
-jurídicas. Un espacio para analizar las normas,
-comprender sus implicaciones y pensar el Derecho.
-</p>
-
-</div>
+        <p>
+            Un espacio dedicado al estudio, la reflexión y el análisis
+            de las distintas disciplinas jurídicas. Normas, instituciones
+            y cuestiones de interés abordadas desde una perspectiva jurídica.
+        </p>
+    </div>
 </section>
 
-<section class="seccion">
-<div class="contenedor intro">
+<section class="introduccion">
+    <div class="contenedor">
+        <div class="numero">01 / El espacio editorial</div>
 
-<div>
-<p class="etiqueta" style="color:var(--burdeos)">
-01 / El espacio editorial
-</p>
+        <h2>Ideas, legislación y pensamiento jurídico.</h2>
 
-<h2>Ideas, legislación y pensamiento jurídico.</h2>
-</div>
-
-<div class="texto">
-<p>
-Este espacio reúne publicaciones dedicadas al estudio
-y análisis del Derecho, sus distintas disciplinas
-y las cuestiones jurídicas de interés.
-</p>
-
-<p style="margin-top:18px">
-Un lugar para la reflexión, el comentario y la divulgación,
-desde una perspectiva rigurosa y accesible.
-</p>
-</div>
-
-</div>
+        <p>
+            Este espacio reúne artículos y publicaciones sobre las principales
+            ramas del Derecho. Una biblioteca jurídica en construcción,
+            concebida para abordar cuestiones normativas, doctrinales y
+            prácticas con rigor, claridad y vocación divulgativa.
+        </p>
+    </div>
 </section>
 
-<section class="categorias">
-<div class="contenedor">
+<section class="materias">
+    <div class="contenedor">
+        <div class="numero">02 / Materias de interés</div>
 
-<p class="etiqueta" style="color:var(--burdeos)">
-02 / Materias de interés
-</p>
+        <h2>Las distintas ramas del Derecho.</h2>
 
-<div class="categorias-lista">
+        <p class="materias-intro">
+            Las publicaciones se organizan por materias para facilitar
+            su consulta y ofrecer una visión ordenada de los distintos
+            ámbitos del conocimiento jurídico.
+        </p>
 
-<div class="categoria">Derecho administrativo</div>
+        <div class="categorias-lista">
 
-<div class="categoria">Derecho penal</div>
+            <div class="categoria">
+                <span>Derecho administrativo</span>
+            </div>
 
-<div class="categoria">Derecho civil</div>
+            <div class="categoria">
+                <span>Derecho penal</span>
+            </div>
 
-<div class="categoria">Derecho mercantil</div>
+            <div class="categoria">
+                <span>Derecho civil</span>
+            </div>
 
-<div class="categoria">Derecho laboral</div>
+            <div class="categoria">
+                <span>Derecho mercantil</span>
+            </div>
 
-<div class="categoria">Derecho constitucional</div>
+            <div class="categoria">
+                <span>Derecho laboral</span>
+            </div>
 
-<div class="categoria">Derecho internacional</div>
+            <div class="categoria">
+                <span>Derecho constitucional</span>
+            </div>
 
-<div class="categoria">Derecho de familia</div>
+            <div class="categoria">
+                <span>Derecho internacional</span>
+            </div>
 
-</div>
+            <div class="categoria">
+                <span>Derecho de familia</span>
+            </div>
 
-</div>
+            <div class="categoria">
+                <span>Derecho tributario</span>
+            </div>
+
+        </div>
+    </div>
 </section>
 
-<section class="publicaciones">
-<div class="contenedor">
+<section class="biblioteca">
+    <div class="contenedor">
+        <div class="numero">03 / Biblioteca jurídica</div>
 
-<div class="publicaciones-cabecera">
-<p class="etiqueta" style="color:var(--burdeos)">
-03 / Biblioteca jurídica
-</p>
+        <h2>Artículos y publicaciones.</h2>
 
-<h2>Artículos y comentarios.</h2>
+        <p class="biblioteca-intro">
+            Una selección de trabajos dedicados al estudio de cuestiones
+            jurídicas concretas.
+        </p>
 
-<p class="texto">
-Publicaciones organizadas por materias jurídicas.
-</p>
-</div>
+        <article class="articulo">
 
-<div class="publicaciones-grid">
+            <div class="articulo-imagen">
+                VECIA<br>JURISTAS
+            </div>
 
-<article class="articulo">
+            <div>
+                <div class="articulo-categoria">
+                    Derecho civil · Adopción internacional
+                </div>
 
-<span class="categoria-texto">
-Derecho civil · Adopción internacional
-</span>
+                <h3>
+                    El régimen jurídico del reconocimiento
+                    de las adopciones internacionales (I)
+                </h3>
 
-<h3>El régimen jurídico del reconocimiento de las adopciones internacionales (I)</h3>
+                <p>
+                    El reconocimiento en España de las adopciones constituidas
+                    en el extranjero plantea importantes cuestiones de Derecho
+                    internacional privado. Este trabajo examina el marco
+                    normativo aplicable, con especial atención al Convenio
+                    de La Haya de 1993 y a la Ley 54/2007, de adopción
+                    internacional.
+                </p>
 
-<p>
-Una aproximación al sistema español de reconocimiento de las adopciones
-constituidas en el extranjero: el Convenio de La Haya de 1993,
-los instrumentos internacionales y la Ley de Adopción Internacional.
-</p>
+                <a class="leer"
+                   href="reconocimiento-adopciones-internacionales-I.html">
+                    Leer artículo →
+                </a>
+            </div>
 
-<div class="meta">VECIA Juristas · Primera entrega</div>
-
-<a class="leer-articulo" href="reconocimiento-adopciones-internacionales-I.html">
-Leer artículo →
-</a>
-
-</article>
-
-</div>
-
-<div class="nota-editorial">
-Esta biblioteca se ampliará progresivamente con nuevos artículos,
-comentarios y estudios especializados en las distintas materias del Derecho.
-</div>
-
-</div>
-</section>
-
-<section class="invitacion">
-<div class="contenedor">
-
-<p class="etiqueta">VECIA Juristas</p>
-
-<h2>El conocimiento jurídico está en movimiento.</h2>
-
-<p>
-Un espacio abierto al análisis, la reflexión y la comprensión
-del Derecho y de su influencia en la sociedad.
-</p>
-
-<a href="index.html#contacto" class="boton">
-Contactar
-</a>
-
-</div>
-</section>
-
-<section class="seccion">
-<div class="contenedor">
-
-<a href="index.html" class="volver">
-← Volver a la página principal
-</a>
-
-</div>
+        </article>
+    </div>
 </section>
 
 </main>
 
-<footer class="footer-vecia">
-<div class="contenedor">
+<footer>
+    <div class="contenedor">
 
-<div class="footer-superior">
+        <div class="footer-contenido">
 
-<div class="footer-identidad">
-<div class="footer-logo">VECIA JURISTAS</div>
-<p class="lema">
-Asesoramiento, consultoría y mucho + Derecho
-</p>
-</div>
+            <div>
+                <div class="footer-logo">VECIA<span>.</span></div>
 
-<div class="footer-columna">
-<h3>Legal</h3>
-<a href="aviso-legal.html">Aviso legal</a>
-<a href="politica-privacidad.html">Política de privacidad</a>
-<a href="politica-cookies.html">Política de cookies</a>
-<button type="button" onclick="window.VECIAConsent && window.VECIAConsent.openSettings()">
-Configurar cookies
-</button>
-</div>
+                <p>
+                    Asesoramiento, consultoría y mucho + Derecho.
+                </p>
+            </div>
 
-<div class="footer-columna">
-<h3>Redes</h3>
-<div class="redes-iconos">
-<a href="https://www.instagram.com/vecia_juancgv/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-<img src="https://cdn.simpleicons.org/instagram/e9e2d3" alt="Instagram">
-</a>
-<a href="https://x.com/Vecia_juristas" target="_blank" rel="noopener noreferrer" aria-label="X">
-<img src="https://cdn.simpleicons.org/x/e9e2d3" alt="X">
-</a>
-<a href="https://www.tiktok.com/@vecia.juristas" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-<img src="https://cdn.simpleicons.org/tiktok/e9e2d3" alt="TikTok">
-</a>
-<a href="https://www.linkedin.com/in/juan-carlos-garcía-vega-58001a359/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-<img src="https://api.iconify.design/mdi/linkedin.svg?color=%23e9e2d3" alt="LinkedIn">
-</a>
-</div>
-</div>
+            <div>
+                <h4>Enlaces de interés</h4>
 
-<div class="footer-columna">
-<h3>Contacto</h3>
-<a href="mailto:juancgv36@gmail.com">juancgv36@gmail.com</a>
-<a href="tel:+34634260689">634 260 689</a>
-<a href="https://wa.me/34634260689" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-</div>
+                <div class="footer-enlaces">
+                    <a href="index.html">Inicio</a>
+                    <a href="quienes-somos.html">Quiénes somos</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="articulos.html">Artículos</a>
+                </div>
+            </div>
 
-</div>
+            <div>
+                <h4>Redes y contacto</h4>
 
-<div class="footer-inferior">
-<p>© 2026 VECIA Juristas. Todos los derechos reservados.</p>
-</div>
+                <div class="footer-enlaces">
+                    <a href="https://www.instagram.com/vecia_juancgv/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://x.com/Vecia_juristas" target="_blank" rel="noopener">X</a>
+                    <a href="https://www.tiktok.com/@vecia.juristas" target="_blank" rel="noopener">TikTok</a>
+                    <a href="https://www.linkedin.com/in/juan-carlos-garcía-vega-58001a359/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="mailto:juancgv36@gmail.com">juancgv36@gmail.com</a>
+                    <a href="tel:+34634260689">634 260 689</a>
+                    <a href="https://wa.me/34634260689" target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+            </div>
 
-</div>
+        </div>
+
+        <div class="footer-final">
+            <span>© 2026 VECIA Juristas. Todos los derechos reservados.</span>
+
+            <span>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="#" onclick="window.VECIAConsent && window.VECIAConsent.openSettings(); return false;">Configurar cookies</a>
+            </span>
+        </div>
+
+    </div>
 </footer>
+
+<script src="cookies.js"></script>
 
 </body>
 </html>
